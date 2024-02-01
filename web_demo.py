@@ -240,7 +240,7 @@ def main():
     print('load model end.')
 
     user_avator = 'assets/user.png'
-    robot_avator = 'assets/logo.png'
+    robot_avator = 'assets/robot.png'
 
     st.title('AMchat (高等数学大模型)')
 
