@@ -11,7 +11,7 @@
 [![license](./assets/license.svg)](./LICENSE)
 [![evaluation](./assets/compass_support.svg)](https://github.com/internLM/OpenCompass/)
 
-[📘Commercial Application](#license) |[🤗HuggingFace]() |[🆕Update News](#🚀 news) |[🤔Reporting Issues]()
+[📘Commercial Application](#license) |[🤗HuggingFace]() |[🆕Update News](#-news) |[🤔Reporting Issues]()
 
 [English](./README.md) |[简体中文](./README_zh-CN.md)
 </div>
