@@ -11,7 +11,7 @@
 [![license](./assets/license.svg)](./LICENSE)
 [![evaluation](./assets/compass_support.svg)](https://github.com/internLM/OpenCompass/)
 
-[📘Commercial Application](#license) | [🤗HuggingFace]() | [🆕Update News](#-news) | [🤔Reporting Issues]()
+[🤗HuggingFace]() | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/youngdon/AMchat) | [🆕Update News](#-news) | [🤔Reporting Issues]()
 
 [English](./README.md) | [简体中文](./README_zh-CN.md)
 </div>
@@ -25,7 +25,7 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 
 ## 🚀 NEWS
 
-
+- 2024.2.1 AMchat第一版部署上线 https://openxlab.org.cn/apps/detail/youngdon/AMchat 🚀
 
 
 
