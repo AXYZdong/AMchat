@@ -242,7 +242,7 @@ def main():
     user_avator = 'assets/user.png'
     robot_avator = 'assets/robot.png'
 
-    st.title('AMchat (高等数学大模型)')
+    st.title('💬 AMchat (高等数学大模型) 🔢')
 
     generation_config = prepare_generation_config()
 
