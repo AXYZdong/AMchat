@@ -11,7 +11,7 @@
 [![license](./assets/license.svg)](./LICENSE)
 [![evaluation](./assets/compass_support.svg)](https://github.com/internLM/OpenCompass/)
 
-[🤗HuggingFace]() | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/youngdon/AMchat) | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope]()
+[🤗HuggingFace]() | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/youngdon/AMchat) | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope](https://www.modelscope.cn/models/yondong/AMchat/summary)
 
 [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/youngdon/AMchat) |  [🆕Update News](#-news) | [🤔Reporting Issues](https://github.com/AXYZdong/AMchat/issues)
 
@@ -146,7 +146,7 @@ streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
 <summary> 演示 </summary>
 
 <p align="center">
-    <img src="assets/deploy_2.png" alt="Demo" width="70%">
+    <img src="assets/deploy_2.png" alt="Demo" width="100%">
 </p>
 
 </details>
