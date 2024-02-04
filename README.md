@@ -24,7 +24,7 @@
 AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习题及其解答的大语言模型。该模型使用 Math 和高等数学习题及习题解析融合数据集，基于internlm2-math-7B模型，通过 xtuner 微调，专门设计用于解答研究生入学考试（考研）数学题目。
 
 如果你觉得这个项目对你有帮助，欢迎 ⭐ Star，让更多的人发现它！
-
+Markdown Navigator
 
 ## 🚀 NEWS
 
@@ -34,7 +34,54 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 
 ## 🛠️ 使用方法
 
-### 环境搭建
+### 快速开始
+
+1. 下载模型
+
+<details>
+<summary> 从 ModelScope </summary>
+
+参考 [模型的下载](https://www.modelscope.cn/docs/%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%8B%E8%BD%BD) 。
+
+```bash
+pip install modelscope
+```
+
+```python
+from modelscope.hub.snapshot_download import snapshot_download
+model_dir = snapshot_download('yondong/AMchat', cache_dir='./')
+```
+
+</details>
+
+
+<details>
+<summary> 从 OpenXLab </summary>
+
+参考 [下载模型](https://openxlab.org.cn/docs/models/%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B.html) 。
+
+```bash
+pip install openxlab
+```
+
+```python
+from openxlab.model import download
+download(model_repo='youngdon/AMchat', 
+        model_name='AMchat', output='./')
+```
+
+</details>
+
+2. 本地部署
+
+```bash
+git clone https://github.com/AXYZdong/AMchat.git
+python start.py
+```
+
+### 重新训练
+
+#### 环境搭建
 
 1. clone 本项目
 
@@ -51,7 +98,7 @@ conda activate AMchat
 pip install -r requirements-raw.txt
 ```
 
-### 微调
+#### 微调
 
 1. 准备配置文件
 
@@ -103,7 +150,7 @@ vim internlm_chat_7b_qlora_oasst1_e3_copy.py
 xtuner train /root/math/config2/internlm2_chat_7b_qlora_oasst1_e3_copy.py
 ```
 
-### 部署
+#### 部署
 
 1. PTH 模型转换为 HuggingFace 模型
 
@@ -142,20 +189,12 @@ xtuner convert merge \
 streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
 ```
 
-<details>
-<summary> 演示 </summary>
+4. 效果演示 
 
 <p align="center">
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
 </p>
 
-</details>
-
-## 👥 贡献者
-
-<a href="https://github.com/AXYZdong/AMchat/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AXYZdong/AMchat" />
-</a>
 
 ## 💕 致谢
 
