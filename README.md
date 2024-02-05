@@ -324,7 +324,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 
 </details>
 
-- 结果文件可在同目录文件[results](./results)中获取
+- 结果文件与评测数据集可在同目录文件[results](./results)中获取
 
 
 ## 💕 致谢
