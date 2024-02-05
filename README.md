@@ -294,10 +294,12 @@ internlm2_chat_7b = dict(
 models = [internlm2_chat_7b]
 
 ```
+
 - 评测启动！
 ```shell
 python run.py configs/eval_turbomind.py -w 指定结果保存路径
 ```
+
 <\details>
 
 <details>
