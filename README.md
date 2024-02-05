@@ -195,6 +195,126 @@ streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
 </p>
 
+#### 量化
+- 首先安装LmDeploy
+
+```shell
+pip install -U lmdeploy
+```
+
+- 然后转换模型为`turbomind`格式
+
+> --dst-path: 可以指定转换后的模型存储位置。
+
+```shell
+lmdeploy convert internlm2-chat-7b  要转化的模型地址 --dst-path 转换后的模型地址
+```
+
+- LmDeploy Chat 对话
+
+```shell
+lmdeploy chat turbomind 转换后的turbomind模型地址
+```
+#### 评测
+- 安装 OpenCompass
+
+```shell
+git clone https://github.com/open-compass/opencompass
+cd opencompass
+pip install -e .
+```
+
+- 下载解压数据集
+
+```shell
+cp /share/temp/datasets/OpenCompassData-core-20231110.zip /root/opencompass/
+unzip OpenCompassData-core-20231110.zip
+```
+
+- 评测启动！
+
+```shell
+python run.py \
+    --datasets math_gen \
+    --hf-path 模型地址 \
+    --tokenizer-path tokenizer地址 \
+    --tokenizer-kwargs padding_side='left' truncation='left'     trust_remote_code=True \
+    --model-kwargs device_map='auto' trust_remote_code=True \
+    --max-seq-len 2048 \
+    --max-out-len 16 \
+    --batch-size 2  \
+    --num-gpus 1 \
+    --debug
+```
+  
+#### Lmdeploy&opencompass 量化以及量化评测  
+##### `W4`量化评测  
+
+- `W4`量化
+```shell
+lmdeploy lite auto_awq 要量化的模型地址 --work-dir 量化后的模型地址
+```
+- 转化为`TurbMind`
+```shell
+lmdeploy convert internlm2-chat-7b 量化后的模型地址  --model-format awq --group-size 128 --dst-path 转换后的模型地址
+```
+- 评测`config`编写  
+```python
+from mmengine.config import read_base
+from opencompass.models.turbomind import TurboMindModel
+
+with read_base():
+ # choose a list of datasets   
+ from .datasets.ceval.ceval_gen import ceval_datasets 
+ # and output the results in a choosen format
+#  from .summarizers.medium import summarizer
+
+datasets = [*ceval_datasets]
+
+internlm2_chat_7b = dict(
+     type=TurboMindModel,
+     abbr='internlm2-chat-7b-turbomind',
+     path='转换后的模型地址',
+     engine_config=dict(session_len=512,
+         max_batch_size=2,
+         rope_scaling_factor=1.0),
+     gen_config=dict(top_k=1,
+         top_p=0.8,
+         temperature=1.0,
+         max_new_tokens=100),
+     max_out_len=100,
+     max_seq_len=512,
+     batch_size=2,
+     concurrency=1,
+     #  meta_template=internlm_meta_template,
+     run_cfg=dict(num_gpus=1, num_procs=1),
+)
+models = [internlm2_chat_7b]
+
+```
+- 评测启动！
+```shell
+python run.py configs/eval_turbomind.py -w 指定结果保存路径
+```
+##### `KV Cache`量化评测 
+- 转换为`TurbMind`
+```shell
+lmdeploy convert internlm2-chat-7b  模型路径 --dst-path 转换后模型路径
+```
+- 计算与获得量化参数
+```shell
+# 计算
+lmdeploy lite calibrate 模型路径 --calib-dataset 'ptb' --calib-samples 128 --calib-seqlen 2048 --work-dir 参数保存路径
+# 获取量化参数
+lmdeploy lite kv_qparams 参数保存路径 转换后模型路径/triton_models/weights/ --num-tp 1
+```
+- 更改`quant_policy`改成`4`,更改上述`config`里面的路径
+- 评测启动！
+```shell
+python run.py configs/eval_turbomind.py -w 结果保存路径
+```
+结果文件可在同目录文件[results](./results)中获取
+
 
 ## 💕 致谢
 
