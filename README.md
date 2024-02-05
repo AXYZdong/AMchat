@@ -248,7 +248,8 @@ python run.py \
 ```
   
 #### Lmdeploy&opencompass 量化以及量化评测  
-##### `W4`量化评测  
+<details>
+<summary> 从 `W4`量化评测   </summary>
 
 - `W4`量化
 ```shell
@@ -296,7 +297,10 @@ models = [internlm2_chat_7b]
 ```shell
 python run.py configs/eval_turbomind.py -w 指定结果保存路径
 ```
-##### `KV Cache`量化评测 
+<\details>
+
+<details>
+<summary> `KV Cache`量化评测   </summary>
 - 转换为`TurbMind`
 ```shell
 lmdeploy convert internlm2-chat-7b  模型路径 --dst-path 转换后模型路径
@@ -313,7 +317,9 @@ lmdeploy lite kv_qparams 参数保存路径 转换后模型路径/triton_models/
 ```shell
 python run.py configs/eval_turbomind.py -w 结果保存路径
 ```
-结果文件可在同目录文件[results](./results)中获取
+
+<\details>
+- 结果文件可在同目录文件[results](./results)中获取
 
 
 ## 💕 致谢
