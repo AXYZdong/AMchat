@@ -79,6 +79,12 @@ git clone https://github.com/AXYZdong/AMchat.git
 python start.py
 ```
 
+3. Docker部署
+
+```bash
+docker run -t -i --rm --gpus all -p 8501:8501 guidonsdocker/amchat:latest bash start.sh
+```
+
 ### 重新训练
 
 #### 环境搭建
