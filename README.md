@@ -25,9 +25,12 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 
 如果你觉得这个项目对你有帮助，欢迎 ⭐ Star，让更多的人发现它！
 
-## 🚀 NEWS
+## 🚀 News
 
-- 2024.2.1 AMchat第一版部署上线 https://openxlab.org.cn/apps/detail/youngdon/AMchat 🚀
+
+[2024.02.06] 支持了Docker部署。
+
+[2024.02.01] AMchat第一版部署上线 https://openxlab.org.cn/apps/detail/youngdon/AMchat 🚀
 
 
 
