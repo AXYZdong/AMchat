@@ -24,7 +24,6 @@
 AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习题及其解答的大语言模型。该模型使用 Math 和高等数学习题及习题解析融合数据集，基于internlm2-math-7B模型，通过 xtuner 微调，专门设计用于解答研究生入学考试（考研）数学题目。
 
 如果你觉得这个项目对你有帮助，欢迎 ⭐ Star，让更多的人发现它！
-Markdown Navigator
 
 ## 🚀 NEWS
 
