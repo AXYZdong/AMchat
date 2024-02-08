@@ -24,11 +24,13 @@
 AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习题及其解答的大语言模型。该模型使用 Math 和高等数学习题及习题解析融合数据集，基于internlm2-math-7B模型，通过 xtuner 微调，专门设计用于解答研究生入学考试（考研）数学题目。
 
 如果你觉得这个项目对你有帮助，欢迎 ⭐ Star，让更多的人发现它！
-Markdown Navigator
 
-## 🚀 NEWS
+## 🚀 News
 
-- 2024.2.1 AMchat第一版部署上线 https://openxlab.org.cn/apps/detail/youngdon/AMchat 🚀
+
+[2024.02.06] 支持了Docker部署。
+
+[2024.02.01] AMchat第一版部署上线 https://openxlab.org.cn/apps/detail/youngdon/AMchat 🚀
 
 
 
@@ -77,6 +79,12 @@ download(model_repo='youngdon/AMchat',
 ```bash
 git clone https://github.com/AXYZdong/AMchat.git
 python start.py
+```
+
+3. Docker部署
+
+```bash
+docker run -t -i --rm --gpus all -p 8501:8501 guidonsdocker/amchat:latest bash start.sh
 ```
 
 ### 重新训练
