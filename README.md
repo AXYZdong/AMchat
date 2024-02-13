@@ -2,10 +2,8 @@
 <div align="center">
 
 <img src="./assets/logo.png" width="200"/>
-  <div> </div>
   <div align="center">
-    <b><font size="5">AMchat</font></b>
-    <div> </div>
+    <b><span style="font-size: large; ">AMchat</span></b>
   </div>
 
 [![license](./assets/license.svg)](./LICENSE)
@@ -15,7 +13,7 @@
 
 [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/youngdon/AMchat) |  [🆕Update News](#-news) | [🤔Reporting Issues](https://github.com/AXYZdong/AMchat/issues)
 
-[English](./README.md) | [简体中文](./README_zh-CN.md)
+[English](./README_en-US.md) | [简体中文](./README.md)
 </div>
 
 
@@ -203,9 +201,9 @@ streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
 </p>
 
-- AMchat与Math-7B在积分问题上对于同一问题的解答
-
-- AMchat回答正确，Math-7B回答错误。
+- AMchat 与 InternLM2-Math-7B 在积分问题上对于同一问题的解答
+AMchat 回答正确，InternLM2-Math-7B 回答错误。
+ 
 <p align="center">
     <img src="assets/AMchat.png" alt="Demo" width="100%">
     <img src="assets/Math-7B.png" alt="Demo" width="100%">
