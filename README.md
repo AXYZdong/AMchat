@@ -3,7 +3,7 @@
 
 <img src="./assets/logo.png" width="200"/>
   <div align="center">
-    <b><span style="font-size: large; ">AMchat</span></b>
+    <b><font size="5">AMchat</font></b>
   </div>
 
 [![license](./assets/license.svg)](./LICENSE)
