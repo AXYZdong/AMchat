@@ -202,6 +202,14 @@ streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
 <p align="center">
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
 </p>
+# AMchat与Math-7B在积分问题上对于同一问题的解答
+# AMchat回答正确，Math-7B回答错误。
+<p align="left">
+    <img src="assets/AMchat.png" alt="Demo" width="100%">
+</p>
+<p align="right">
+    <img src="assets/Math-7B.png" alt="Demo" width="100%">
+</p>
 
 #### 量化
 - 首先安装LmDeploy
