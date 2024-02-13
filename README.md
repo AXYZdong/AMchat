@@ -201,12 +201,12 @@ streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
 </p>
 
-- AMchat 与 InternLM2-Math-7B 在积分问题上对于同一问题的解答
-AMchat 回答正确，InternLM2-Math-7B 回答错误。
- 
+- AMchat 与 InternLM2-Math-7B 在积分问题上对于同一问题的解答。 
+  AMchat 回答正确，InternLM2-Math-7B 回答错误。
+  
 <p align="center">
-    <img src="assets/AMchat.png" alt="Demo" width="100%">
-    <img src="assets/Math-7B.png" alt="Demo" width="100%">
+    <img src="assets/test_AMchat.png" alt="Demo" width="100%">
+    <img src="assets/test_InternLM2-Math-7B.png" alt="Demo" width="100%">
 </p>
 
 #### 量化
