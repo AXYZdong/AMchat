@@ -11,7 +11,7 @@
 
 [🤗HuggingFace]() | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/youngdon/AMchat) | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope](https://www.modelscope.cn/models/yondong/AMchat/summary)
 
-[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/youngdon/AMchat) |  [🆕Update News](#-news) | [🤔Reporting Issues](https://github.com/AXYZdong/AMchat/issues)
+[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/youngdon/AMchat) |  [🆕Update News](#-news) | [🤔Reporting Issues](https://github.com/AXYZdong/AMchat/issues) 丨 [![bilibili](https://img.shields.io/badge/AMchat-bilibili-%23fb7299)](https://www.bilibili.com/video/BV14v421i7So/)
 
 [English](./README_en-US.md) | [简体中文](./README.md)
 </div>
@@ -19,7 +19,7 @@
 
 ## 📖 简介
 
-AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习题及其解答的大语言模型。该模型使用 Math 和高等数学习题及习题解析融合数据集，基于internlm2-math-7B模型，通过 xtuner 微调，专门设计用于解答研究生入学考试（考研）数学题目。
+AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习题及其解答的大语言模型。该模型使用 Math 和高等数学习题及习题解析融合数据集，基于 InternLM2-Math-7B 模型，通过 xtuner 微调，专门设计用于解答研究生入学考试（考研）数学题目。
 
 如果你觉得这个项目对你有帮助，欢迎 ⭐ Star，让更多的人发现它！
 
