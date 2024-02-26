@@ -6,14 +6,31 @@
     <b><font size="5">AMchat</font></b>
   </div>
 
-[![license](./assets/license.svg)](./LICENSE)
-[![evaluation](./assets/compass_support.svg)](https://github.com/internLM/OpenCompass/)
+[![license][license-image]][license-url]
+[![evaluation][evaluation-image]][evaluation-url]
 
-[🤗HuggingFace]() | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/youngdon/AMchat) | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope](https://www.modelscope.cn/models/yondong/AMchat/summary)
+[🤗HuggingFace]() | [![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope][ModelScope-url]
 
-[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/youngdon/AMchat) |  [🆕Update News](#-news) | [🤔Reporting Issues](https://github.com/AXYZdong/AMchat/issues) 丨 [![bilibili](https://img.shields.io/badge/AMchat-bilibili-%23fb7299)](https://www.bilibili.com/video/BV14v421i7So/)
+[![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url] | [🆕Update News](#-news) | [🤔Reporting Issues][Issues-url] 丨 [![bilibili][bilibili-image]][bilibili-url]
 
 [English](./README_en-US.md) | [简体中文](./README.md)
+
+
+
+[license-image]: ./assets/license.svg
+[evaluation-image]: ./assets/compass_support.svg
+[OpenXLab_Model-image]: https://cdn-static.openxlab.org.cn/header/openxlab_models.svg
+[OpenXLab_App-image]: https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg
+[bilibili-image]: https://img.shields.io/badge/AMchat-bilibili-%23fb7299
+
+[license-url]: ./LICENSE
+[evaluation-url]: https://github.com/internLM/OpenCompass/
+[OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/youngdon/AMchat
+[OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/youngdon/AMchat
+[bilibili-url]: https://www.bilibili.com/video/BV14v421i7So/
+[ModelScope-url]: https://www.modelscope.cn/models/yondong/AMchat/summary
+[Issues-url]: https://github.com/AXYZdong/AMchat/issues
+
 </div>
 
 
