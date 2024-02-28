@@ -355,11 +355,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 
 </details>
 
-#### 评测结果
-Model | ceval-advanced_mathematics | ceval-discrete_mathematics | ceval-high_school_mathematics | ceval-middle_school_mathematics | 
-:--------|:---------|:--------|:---------|:---------|
-internlm-math-7b | 21.05 | 12.5 | 11.11 | 26.32 | 
-ours | 15.79 | 25 | 11.11 | 10.53 |
+
 
 - 结果文件与评测数据集可在同目录文件[results](./results)中获取
 
