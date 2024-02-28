@@ -10,8 +10,8 @@ def pdf_to_images(pdf_path, output_folder):
         image.save(image_path, "PNG")  # 将图片保存为 JPEG 格式
 
 if __name__ == "__main__":
-    pdf_path = "/CV/xhr_project/Paper_all/OcrData/source/eng_demo.pdf"  # 输入 PDF 文件路径
-    output_folder = "OcrData/Pix2Text/output"  # 输出图片文件夹路径
+    pdf_path = "demo.pdf"  # 输入 PDF 文件路径
+    output_folder = "./output"  # 输出图片文件夹路径
     
     # 调用函数进行转换
     pdf_to_images(pdf_path, output_folder)
