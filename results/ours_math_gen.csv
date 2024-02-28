@@ -1,2 +1,0 @@
-dataset,version,metric,mode,opencompass.models.huggingface.HuggingFace_yondong_AMchat
-math,265cce,accuracy,gen,0.64
