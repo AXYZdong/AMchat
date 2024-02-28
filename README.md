@@ -2,26 +2,41 @@
 <div align="center">
 
 <img src="./assets/logo.png" width="200"/>
-  <div> </div>
   <div align="center">
     <b><font size="5">AMchat</font></b>
-    <div> </div>
   </div>
 
-[![license](./assets/license.svg)](./LICENSE)
-[![evaluation](./assets/compass_support.svg)](https://github.com/internLM/OpenCompass/)
+[![license][license-image]][license-url]
+[![evaluation][evaluation-image]][evaluation-url]
 
-[🤗HuggingFace]() | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/youngdon/AMchat) | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope](https://www.modelscope.cn/models/yondong/AMchat/summary)
+[🤗HuggingFace]() | [![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope][ModelScope-url]
 
-[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/youngdon/AMchat) |  [🆕Update News](#-news) | [🤔Reporting Issues](https://github.com/AXYZdong/AMchat/issues)
+[![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url] | [🆕Update News](#-news) | [🤔Reporting Issues][Issues-url] 丨 [![bilibili][bilibili-image]][bilibili-url]
 
-[English](./README.md) | [简体中文](./README_zh-CN.md)
+[English](./README_en-US.md) | [简体中文](./README.md)
+
+
+
+[license-image]: ./assets/license.svg
+[evaluation-image]: ./assets/compass_support.svg
+[OpenXLab_Model-image]: https://cdn-static.openxlab.org.cn/header/openxlab_models.svg
+[OpenXLab_App-image]: https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg
+[bilibili-image]: https://img.shields.io/badge/AMchat-bilibili-%23fb7299
+
+[license-url]: ./LICENSE
+[evaluation-url]: https://github.com/internLM/OpenCompass/
+[OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/youngdon/AMchat
+[OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/youngdon/AMchat
+[bilibili-url]: https://www.bilibili.com/video/BV14v421i7So/
+[ModelScope-url]: https://www.modelscope.cn/models/yondong/AMchat/summary
+[Issues-url]: https://github.com/AXYZdong/AMchat/issues
+
 </div>
 
 
 ## 📖 简介
 
-AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习题及其解答的大语言模型。该模型使用 Math 和高等数学习题及习题解析融合数据集，基于internlm2-math-7B模型，通过 xtuner 微调，专门设计用于解答研究生入学考试（考研）数学题目。
+AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习题及其解答的大语言模型。该模型使用 Math 和高等数学习题及习题解析融合数据集，基于 InternLM2-Math-7B 模型，通过 xtuner 微调，专门设计用于解答研究生入学考试（考研）数学题目。
 
 如果你觉得这个项目对你有帮助，欢迎 ⭐ Star，让更多的人发现它！
 
@@ -201,6 +216,14 @@ streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
 
 <p align="center">
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
+</p>
+
+- AMchat 与 InternLM2-Math-7B 在积分问题上对于同一问题的解答。 
+  AMchat 回答正确，InternLM2-Math-7B 回答错误。
+  
+<p align="center">
+    <img src="assets/test_AMchat.png" alt="Demo" width="100%">
+    <img src="assets/test_InternLM2-Math-7B.png" alt="Demo" width="100%">
 </p>
 
 #### 量化
