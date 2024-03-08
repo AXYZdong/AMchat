@@ -360,13 +360,35 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 
 ## 💕 致谢
 
-- [**InternLM-tutorial**](https://github.com/InternLM/tutorial)
+### 核心贡献者
 
-- [**InternStudio**](https://studio.intern-ai.org.cn/)
+- 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，RAG框架）
+- 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集）
+- 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 数据收集，数据集整理及增强, 模型量化与评测, RAG推理与验证）
+- 揭熔阳 （Datawhale成员 哈尔滨工业大学 数据收集 RAG内容整理）
+- 彭琛（Datawhale成员 数据收集）
+- 王新茗 （数据收集）
+- 刘志文 （Datawhale成员 山东女子学院 数据收集）
+- 王睿玥 （Northeastern University 数据收集）
+- 陈逸涵 （Datawhale成员 北京邮电大学 数据收集）
+- guidons （东北大学 docker部署）
 
-- [**xtuner**](https://github.com/InternLM/xtuner)
+### 其他
 
-感谢上海人工智能实验室推出的书生·浦语大模型实战营，为我们的项目提供宝贵的技术指导和强大的算力支持。
+<div align="center">
+
+***感谢上海人工智能实验室组织的 书生·浦语实战营 学习活动~***
+
+***感谢 OpenXLab 对项目部署的算力支持~***
+
+***感谢 浦语小助手 对项目的支持~***
+
+***感谢上海人工智能实验室推出的书生·浦语大模型实战营，为我们的项目提供宝贵的技术指导和强大的算力支持***
+
+[**InternLM-tutorial**](https://github.com/InternLM/tutorial)、[**InternStudio**](https://studio.intern-ai.org.cn/)、[**xtuner**](https://github.com/InternLM/xtuner)、[**InternLM-Math**](https://github.com/InternLM/InternLM-Math)
+</div>
+
+
 
 
 ## 开源许可证
