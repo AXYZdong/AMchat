@@ -365,7 +365,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 - 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，RAG框架）
 - 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集）
 - 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 数据收集，数据集整理及增强, 模型量化与评测, RAG推理与验证）
-- 揭熔阳 （Datawhale成员 哈尔滨工业大学 数据收集 RAG内容整理）
+- 揭熔阳 （Datawhale成员 哈尔滨工业大学(威海) 数据收集 RAG内容整理）
 - 彭琛（Datawhale成员 数据收集）
 - 王新茗 （数据收集）
 - 刘志文 （Datawhale成员 山东女子学院 数据收集）
