@@ -33,12 +33,32 @@
 
 </div>
 
+## 📝目录
+
+- [📖 简介](#-简介)
+- [🚀 News](#-news)
+- [🛠️ 使用方法](#%EF%B8%8F-使用方法)
+  * [快速开始](#快速开始)
+  * [重新训练](#重新训练)
+    + [环境搭建](#环境搭建)
+    + [微调](#微调)
+    + [部署](#部署)
+    + [量化](#量化)
+    + [评测](#评测)
+    + [Lmdeploy&opencompass 量化以及量化评测](#lmdeploy-opencompass-量化以及量化评测)
+- [💕 致谢](#-致谢)
+- [开源许可证](#开源许可证)
+
 
 ## 📖 简介
 
 AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习题及其解答的大语言模型。该模型使用 Math 和高等数学习题及习题解析融合数据集，基于 InternLM2-Math-7B 模型，通过 xtuner 微调，专门设计用于解答研究生入学考试（考研）数学题目。
 
 如果你觉得这个项目对你有帮助，欢迎 ⭐ Star，让更多的人发现它！
+
+<p align="center">
+    <img src="assets/tech_route.png" alt="route" width="100%">
+</p>
 
 ## 🚀 News
 
@@ -364,7 +384,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 
 - 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，RAG框架）
 - 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集）
-- 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 数据收集，数据集整理及增强, 模型量化与评测, RAG推理与验证）
+- 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 数据收集，数据集整理及增强，模型量化与评测，RAG推理与验证）
 - 揭熔阳 （Datawhale成员 哈尔滨工业大学(威海) 数据收集 RAG内容整理）
 - 彭琛（Datawhale成员 数据收集）
 - 王新茗 （数据收集）
@@ -388,7 +408,11 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 [**InternLM-tutorial**](https://github.com/InternLM/tutorial)、[**InternStudio**](https://studio.intern-ai.org.cn/)、[**xtuner**](https://github.com/InternLM/xtuner)、[**InternLM-Math**](https://github.com/InternLM/InternLM-Math)
 </div>
 
+## 👥 贡献者
 
+<a href="https://github.com/AXYZdong/AMchat/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AXYZdong/AMchat" />
+</a>
 
 
 ## 开源许可证
