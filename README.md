@@ -408,8 +408,6 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 [**InternLM-tutorial**](https://github.com/InternLM/tutorial)、[**InternStudio**](https://studio.intern-ai.org.cn/)、[**xtuner**](https://github.com/InternLM/xtuner)、[**InternLM-Math**](https://github.com/InternLM/InternLM-Math)
 </div>
 
-## 👥 贡献者
-
 <a href="https://github.com/AXYZdong/AMchat/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=AXYZdong/AMchat" />
 </a>
