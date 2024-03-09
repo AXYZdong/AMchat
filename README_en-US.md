@@ -57,7 +57,7 @@ The AM (Advanced Mathematics) chat is a large language model that integrates mat
 If you find this project helpful, feel free to ⭐ Star it and help more people discover it!
 
 <p align="center">
-    <img src="assets/tech_route.png" alt="route" width="100%">
+    <img src="assets/tech_route.svg" alt="route" width="100%">
 </p>
 
 ## 🚀 News
