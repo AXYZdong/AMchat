@@ -57,7 +57,7 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 如果你觉得这个项目对你有帮助，欢迎 ⭐ Star，让更多的人发现它！
 
 <p align="center">
-    <img src="assets/tech_route.png" alt="route" width="100%">
+    <img src="assets/tech_route.svg" alt="route" width="100%">
 </p>
 
 ## 🚀 News
