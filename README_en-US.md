@@ -302,7 +302,7 @@ python run.py \
 #### LMDeploy & OpenCompass Quantization and Evaluation
 
 <details>
-<summary>Quantization Evaluation from <strong> W4 </strong></summary>
+<summary><strong> W4 </strong> Quantization Evaluation </summary>
 
 - `W4` Quantization
 ```shell
