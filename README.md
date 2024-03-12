@@ -41,10 +41,10 @@
   * [快速开始](#快速开始)
   * [重新训练](#重新训练)
     + [环境搭建](#环境搭建)
-    + [微调](#微调)
-    + [部署](#部署)
-    + [量化](#量化)
-    + [评测](#评测)
+    + [XTuner微调](#xtuner微调)
+    + [OpenXLab应用部署](#openxlab应用部署)
+    + [LMDeploy量化](#lmdeploy量化)
+    + [OpenCompass评测](#opencompass评测)
     + [LMDeploy&OpenCompass 量化以及量化评测](#lmdeployopencompass-量化以及量化评测)
 - [💕 致谢](#-致谢)
 - [开源许可证](#开源许可证)
@@ -141,7 +141,7 @@ conda activate AMchat
 pip install -r requirements-raw.txt
 ```
 
-#### 微调
+#### XTuner微调
 
 1. 准备配置文件
 
@@ -193,9 +193,7 @@ vim internlm_chat_7b_qlora_oasst1_e3_copy.py
 xtuner train /root/math/config2/internlm2_chat_7b_qlora_oasst1_e3_copy.py
 ```
 
-#### 部署
-
-1. PTH 模型转换为 HuggingFace 模型
+5. PTH 模型转换为 HuggingFace 模型
 
 ```bash
 xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
@@ -203,7 +201,7 @@ xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
                          ./hf
 ```
 
-2. HuggingFace 模型合并到大语言模型
+6. HuggingFace 模型合并到大语言模型
 ```bash
 export MKL_SERVICE_FORCE_INTEL=1
 export MKL_THREADING_LAYER='GNU'
@@ -226,13 +224,15 @@ xtuner convert merge \
     --max-shard-size 2GB
 ```
 
-3. Demo
+7. Demo
 
 ```bash
 streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
 ```
 
-4. 效果演示 
+#### OpenXLab应用部署
+
+仅需要 Fork 本仓库，然后在 OpenXLab 上创建一个新的项目，将 Fork 的仓库与新建的项目关联，即可在 OpenXLab 上部署 AMchat。
 
 <p align="center">
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
@@ -246,7 +246,7 @@ streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
     <img src="assets/test_InternLM2-Math-7B.png" alt="Demo" width="100%">
 </p>
 
-#### 量化
+#### LMDeploy量化
 - 首先安装LMDeploy
 
 ```shell
@@ -266,7 +266,7 @@ lmdeploy convert internlm2-chat-7b  要转化的模型地址 --dst-path 转换�
 ```shell
 lmdeploy chat turbomind 转换后的turbomind模型地址
 ```
-#### 评测
+#### OpenCompass评测
 - 安装 OpenCompass
 
 ```shell
@@ -383,7 +383,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 ### 核心贡献者
 
 - 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，RAG框架）
-- 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集）
+- 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集，RAG内容整理）
 - 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 数据收集，数据集整理及增强，模型量化与评测，RAG推理与验证）
 - 揭熔阳 （Datawhale成员 哈尔滨工业大学(威海) 数据收集 RAG内容整理）
 - 彭琛（Datawhale成员 数据收集）
