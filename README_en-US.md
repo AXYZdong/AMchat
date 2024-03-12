@@ -232,6 +232,8 @@ streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
 
 #### OpenXLab Deployment
 
+To deploy AMchat on OpenXLab, simply fork this repository and then create a new project on OpenXLab. Associate the forked repository with the newly created project, and you will be able to deploy AMchat on OpenXLab.
+
 <p align="center">
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
 </p>
@@ -300,7 +302,7 @@ python run.py \
 #### LMDeploy & OpenCompass Quantization and Evaluation
 
 <details>
-<summary>Quantization Evaluation from `W4`</summary>
+<summary>Quantization Evaluation from <strong> W4 </strong></summary>
 
 - `W4` Quantization
 ```shell
@@ -355,7 +357,7 @@ python run.py configs/eval_turbomind.py -w Specify the result save path
 </details>
 
 <details>
-<summary>`KV Cache` Quantization Evaluation</summary>
+<summary><strong> KV Cache </strong> Quantization Evaluation</summary>
 
 - Convert to `TurbMind`
 ```shell
