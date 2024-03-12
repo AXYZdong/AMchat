@@ -52,7 +52,7 @@
 
 ## 📖 Introduction
 
-The AM (Advanced Mathematics) chat is a large language model that integrates mathematical knowledge, advanced mathematics problems, and their solutions. This model utilizes a dataset that fuses Math and advanced mathematics problems with their solutions, based on the InternLM2-Math-7B model. It is specifically fine-tuned with xtuner and designed to answer questions related to graduate entrance examinations (postgraduate entrance exams) in mathematics.
+AM (Advanced Mathematics) Chat is a large-scale language model that integrates mathematical knowledge, advanced mathematics problems, and their solutions. This model utilizes a dataset that combines Math and advanced mathematics problems with their analyses. It is based on the InternLM2-Math-7B model and has been fine-tuned with xtuner, specifically designed to solve advanced mathematics problems.
 
 If you find this project helpful, feel free to ⭐ Star it and help more people discover it!
 
