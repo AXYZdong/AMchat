@@ -35,18 +35,18 @@
 
 ## 📝 Contents
 
-- [📖 Introduction](#introduction)
-- [🚀 News](#news)
-- [🛠️ Usage](#usage)
+- [📖 Introduction](#-introduction)
+- [🚀 News](#-news)
+- [🛠️ Usage](#%EF%B8%8F-usage)
   * [Quick Start](#quick-start)
   * [Retraining](#retraining)
     + [Environment Setup](#environment-setup)
-    + [Fine-tuning](#fine-tuning)
-    + [Deployment](#deployment)
-    + [Quantization](#quantization)
-    + [Evaluation](#evaluation)
-    + [Lmdeploy & Opencompass Quantization and Evaluation](#lmdeploy-opencompass-quantization-and-evaluation)
-- [💕 Acknowledgements](#acknowledgements)
+    + [XTuner Fine-tuning](#xtuner-fine-tuning)
+    + [OpenXLab Deployment](#openxlab-deployment)
+    + [LMDeploy Quantization](#lmdeploy-quantization)
+    + [OpenCompass Evaluation](#opencompass-evaluation)
+    + [LMDeploy & OpenCompass Quantization and Evaluation](#lmdeploy--opencompass-quantization-and-evaluation)
+- [💕 Acknowledgements](#-acknowledgements)
 - [License](#license)
 
 
@@ -140,7 +140,7 @@ conda activate AMchat
 pip install -r requirements-raw.txt
 ```
 
-#### Fine-tuning
+#### XTuner Fine-tuning
 
 1. Prepare configuration files
 
@@ -192,9 +192,7 @@ vim internlm_chat_7b_qlora_oasst1_e3_copy.py
 xtuner train /root/math/config2/internlm2_chat_7b_qlora_oasst1_e3_copy.py
 ```
 
-#### Deployment
-
-1. Convert PTH model to HuggingFace model
+5. Convert PTH model to HuggingFace model
 
 ```bash
 xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
@@ -202,7 +200,7 @@ xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
                          ./hf
 ```
 
-2. Merge HuggingFace model into a large language model
+6. Merge HuggingFace model into a large language model
 
 ```bash
 export MKL_SERVICE_FORCE_INTEL=1
@@ -226,13 +224,13 @@ xtuner convert merge \
     --max-shard-size 2GB
 ```
 
-3. Demo
+7. Demo
 
 ```bash
 streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
 ```
 
-4. Effect Demonstration
+#### OpenXLab Deployment
 
 <p align="center">
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
@@ -246,8 +244,8 @@ streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
     <img src="assets/test_InternLM2-Math-7B.png" alt="Demo" width="100%">
 </p>
 
-#### Quantization
-- First, install LmDeploy
+#### LMDeploy Quantization
+- First, install LMDeploy
 
 ```shell
 pip install -U lmdeploy
@@ -261,13 +259,13 @@ pip install -U lmdeploy
 lmdeploy convert internlm2-chat-7b  Model address to be converted --dst-path Converted model address
 ```
 
-- LmDeploy Chat
+- LMDeploy Chat
 
 ```shell
 lmdeploy chat turbomind Converted turbomind model address
 ```
 
-#### Evaluation
+#### OpenCompass Evaluation
 - Install OpenCompass
 
 ```shell
@@ -299,7 +297,7 @@ python run.py \
     --debug
 ```
 
-#### Lmdeploy & OpenCompass Quantization and Evaluation
+#### LMDeploy & OpenCompass Quantization and Evaluation
 
 <details>
 <summary>Quantization Evaluation from `W4`</summary>
