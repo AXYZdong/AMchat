@@ -45,7 +45,7 @@
     + [OpenXLab应用部署](#openxlab应用部署)
     + [LMDeploy量化](#lmdeploy量化)
     + [OpenCompass评测](#opencompass评测)
-    + [LMDeploy&OpenCompass 量化以及量化评测](#lmdeployopencompass-量化以及量化评测)
+    + [LMDeploy & OpenCompass量化以及量化评测](#lmdeploy--opencompass量化以及量化评测)
 - [💕 致谢](#-致谢)
 - [开源许可证](#开源许可证)
 
@@ -298,10 +298,10 @@ python run.py \
     --debug
 ```
   
-#### LMDeploy&OpenCompass 量化以及量化评测  
+#### LMDeploy & OpenCompass量化以及量化评测  
 
 <details>
-<summary> 从 `W4`量化评测 </summary>
+<summary><strong> W4 </strong> 量化评测 </summary>
 
 - `W4`量化
 ```shell
@@ -354,7 +354,7 @@ python run.py configs/eval_turbomind.py -w 指定结果保存路径
 </details>
 
 <details>
-<summary> `KV Cache`量化评测 </summary>
+<summary> <strong> KV Cache </strong> 量化评测 </summary>
 
 - 转换为`TurbMind`
 ```shell
