@@ -3,18 +3,17 @@
 
 <img src="./assets/logo.png" width="200"/>
   <div align="center">
-    <b><font size="5">AMchat</font></b>
+    <p><b><font size="5">AMchat</font></b></p>
   </div>
 
 [![license][license-image]][license-url]
 [![evaluation][evaluation-image]][evaluation-url]
 
-[🤗HuggingFace]() | [![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope][ModelScope-url]
+[🤗HuggingFace][HuggingFace_Model-url] | [![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope][ModelScope-url]
 
 [![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url] | [🆕Update News](#-news) | [🤔Reporting Issues][Issues-url] 丨 [![bilibili][bilibili-image]][bilibili-url]
 
 [English](./README_en-US.md) | [简体中文](./README.md)
-
 
 
 [license-image]: ./assets/license.svg
@@ -25,10 +24,11 @@
 
 [license-url]: ./LICENSE
 [evaluation-url]: https://github.com/internLM/OpenCompass/
+[HuggingFace_Model-url]: https://huggingface.co/axyzdong/AMchat
 [OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/youngdon/AMchat
+[ModelScope-url]: https://www.modelscope.cn/models/yondong/AMchat/summary
 [OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/youngdon/AMchat
 [bilibili-url]: https://www.bilibili.com/video/BV14v421i7So/
-[ModelScope-url]: https://www.modelscope.cn/models/yondong/AMchat/summary
 [Issues-url]: https://github.com/AXYZdong/AMchat/issues
 
 </div>
@@ -62,6 +62,9 @@ If you find this project helpful, feel free to ⭐ Star it and help more people 
 
 ## 🚀 News
 
+[2024.03.14] The model has been uploaded to HuggingFace.
+
+[2024.03.08] The README was enhanced with the addition of a table of contents and a technical roadmap. Additionally, a new document, README_en-US.md, was created.
 
 [2024.02.06] Docker deployment is now supported.
 
