@@ -9,12 +9,11 @@
 [![license][license-image]][license-url]
 [![evaluation][evaluation-image]][evaluation-url]
 
-[🤗HuggingFace]() | [![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope][ModelScope-url]
+[🤗HuggingFace][HuggingFace_Model-url] | [![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope][ModelScope-url]
 
 [![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url] | [🆕Update News](#-news) | [🤔Reporting Issues][Issues-url] 丨 [![bilibili][bilibili-image]][bilibili-url]
 
 [English](./README_en-US.md) | [简体中文](./README.md)
-
 
 
 [license-image]: ./assets/license.svg
@@ -25,10 +24,11 @@
 
 [license-url]: ./LICENSE
 [evaluation-url]: https://github.com/internLM/OpenCompass/
+[HuggingFace_Model-url]: https://huggingface.co/axyzdong/AMchat
 [OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/youngdon/AMchat
+[ModelScope-url]: https://www.modelscope.cn/models/yondong/AMchat/summary
 [OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/youngdon/AMchat
 [bilibili-url]: https://www.bilibili.com/video/BV14v421i7So/
-[ModelScope-url]: https://www.modelscope.cn/models/yondong/AMchat/summary
 [Issues-url]: https://github.com/AXYZdong/AMchat/issues
 
 </div>
@@ -62,6 +62,9 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 
 ## 🚀 News
 
+[2024.03.14] 模型上传至HuggingFace。
+
+[2024.03.08] 完善了README，增加目录、技术路线。增加README_en-US.md。
 
 [2024.02.06] 支持了Docker部署。
 
@@ -380,7 +383,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 
 ## 💕 致谢
 
-### 核心贡献者
+### 项目成员
 
 - 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，RAG框架）
 - 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集，RAG内容整理）
@@ -393,7 +396,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 - 陈逸涵 （Datawhale成员 北京邮电大学 数据收集）
 - guidons （东北大学 docker部署）
 
-### 其他
+### 特别鸣谢
 
 <div align="center">
 
