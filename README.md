@@ -47,6 +47,7 @@
     + [OpenCompass评测](#opencompass评测)
     + [LMDeploy & OpenCompass量化以及量化评测](#lmdeploy--opencompass量化以及量化评测)
 - [💕 致谢](#-致谢)
+- [🖊️ Citation](%EF%B8%8F-citation)
 - [开源许可证](#开源许可证)
 
 
@@ -415,6 +416,17 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 </a>
 
 </div>
+
+## 🖊️ Citation
+
+```bibtex
+@misc{2024AMchat,
+    title={AMchat: A large language model integrating advanced math concepts, exercises, and solutions},
+    author={AMchat Contributors},
+    howpublished = {\url{https://github.com/AXYZdong/AMchat}},
+    year={2024}
+}
+```
 
 ## 开源许可证
 
