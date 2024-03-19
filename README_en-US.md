@@ -47,6 +47,7 @@
     + [OpenCompass Evaluation](#opencompass-evaluation)
     + [LMDeploy & OpenCompass Quantization and Evaluation](#lmdeploy--opencompass-quantization-and-evaluation)
 - [💕 Acknowledgements](#-acknowledgements)
+- [🖊️ Citation](#%EF%B8%8F-citation)
 - [License](#license)
 
 
@@ -400,6 +401,17 @@ python run.py configs/eval_turbomind.py -w Result save path
 <a href="https://github.com/AXYZdong/AMchat/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=AXYZdong/AMchat" />
 </a>
+
+## 🖊️ Citation
+
+```bibtex
+@misc{2024AMchat,
+    title={AMchat: A large language model integrating advanced math concepts, exercises, and solutions},
+    author={AMchat Contributors},
+    howpublished = {\url{https://github.com/AXYZdong/AMchat}},
+    year={2024}
+}
+```
 
 ## License
 This project is released under the [Apache License 2.0.](https://github.com/InternLM/xtuner/blob/main/LICENSE) Please also adhere to the Licenses of models and datasets being used.
