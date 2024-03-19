@@ -47,7 +47,7 @@
     + [OpenCompass评测](#opencompass评测)
     + [LMDeploy & OpenCompass量化以及量化评测](#lmdeploy--opencompass量化以及量化评测)
 - [💕 致谢](#-致谢)
-- [🖊️ Citation](%EF%B8%8F-citation)
+- [🖊️ Citation](#%EF%B8%8F-citation)
 - [开源许可证](#开源许可证)
 
 
