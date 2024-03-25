@@ -63,6 +63,8 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 
 ## 🚀 News
 
+[2024.03.24] [2024浦源大模型系列挑战赛（春季赛）Top12](https://mp.weixin.qq.com/s/8Xh232cWplgg3qdfMdD0YQ)，创新创意奖。
+
 [2024.03.14] 模型上传至HuggingFace。
 
 [2024.03.08] 完善了README，增加目录、技术路线。增加README_en-US.md。
