@@ -63,6 +63,8 @@ If you find this project helpful, feel free to ⭐ Star it and help more people 
 
 ## 🚀 News
 
+[2024.03.24] [2024 InternLM Challenge (Spring Split) | Innovation and Creativity Award](https://mp.weixin.qq.com/s/8Xh232cWplgg3qdfMdD0YQ).
+
 [2024.03.14] The model has been uploaded to HuggingFace.
 
 [2024.03.08] The README was enhanced with the addition of a table of contents and a technical roadmap. Additionally, a new document, README_en-US.md, was created.
