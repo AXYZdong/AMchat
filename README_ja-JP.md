@@ -11,7 +11,7 @@
 
 [🤗HuggingFace][HuggingFace_Model-url] | [![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] | [<img src="./assets/modelscope_logo.png" width="20px" /> ModelScope][ModelScope-url]
 
-[![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url] | [🆕Update News](#-news) | [🤔Reporting Issues][Issues-url] 丨 [![bilibili][bilibili-image]][bilibili-url]
+[![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url] | [🆕更新情報](#-news) | [🤔問題報告][Issues-url] 丨 [![bilibili][bilibili-image]][bilibili-url]
 
 [English](./README_en-US.md) | [简体中文](./README.md) | [日本語](./README_ja-JP.md)
 
@@ -33,58 +33,58 @@
 
 </div>
 
-## 📝 Contents
+## 📝 目次
 
-- [📖 Introduction](#-introduction)
-- [🚀 News](#-news)
-- [🛠️ Usage](#%EF%B8%8F-usage)
-  * [Quick Start](#quick-start)
-  * [Retraining](#retraining)
-    + [Environment Setup](#environment-setup)
-    + [XTuner Fine-tuning](#xtuner-fine-tuning)
-    + [OpenXLab Deployment](#openxlab-deployment)
-    + [LMDeploy Quantization](#lmdeploy-quantization)
-    + [OpenCompass Evaluation](#opencompass-evaluation)
-    + [LMDeploy & OpenCompass Quantization and Evaluation](#lmdeploy--opencompass-quantization-and-evaluation)
-- [💕 Acknowledgements](#-acknowledgements)
-- [🖊️ Citation](#%EF%B8%8F-citation)
-- [License](#license)
+- [📖 紹介](#-紹介)
+- [🚀 ニュース](#-ニュース)
+- [🛠️ 使い方](#%EF%B8%8F-使い方)
+  * [クイックスタート](#クイックスタート)
+  * [再トレーニング](#再トレーニング)
+    + [環境設定](#環境設定)
+    + [XTuner微調整](#xtuner微調整)
+    + [OpenXLabデプロイメント](#openxlabデプロイメント)
+    + [LMDeploy量子化](#lmdeploy量子化)
+    + [OpenCompass評価](#opencompass評価)
+    + [LMDeploy & OpenCompass量子化と評価](#lmdeploy--opencompass量子化と評価)
+- [💕 謝辞](#-謝辞)
+- [🖊️ 引用](#%EF%B8%8F-引用)
+- [ライセンス](#ライセンス)
 
 
-## 📖 Introduction
+## 📖 紹介
 
-AM (Advanced Mathematics) Chat is a large-scale language model that integrates mathematical knowledge, advanced mathematics problems, and their solutions. This model utilizes a dataset that combines Math and advanced mathematics problems with their analyses. It is based on the InternLM2-Math-7B model and has been fine-tuned with xtuner, specifically designed to solve advanced mathematics problems.
+AM (Advanced Mathematics) Chatは、数学知識、高等数学の問題、およびその解決策を統合した大規模言語モデルです。このモデルは、Mathと高等数学の問題とその分析を組み合わせたデータセットを使用し、InternLM2-Math-7Bモデルに基づいており、高等数学の問題を解決するために特別に設計されたxtunerで微調整されています。
 
-If you find this project helpful, feel free to ⭐ Star it and help more people discover it!
+このプロジェクトが役立つと思われる場合は、⭐ スターを付けて、より多くの人に知ってもらいましょう！
 
 <p align="center">
     <img src="assets/tech_route.svg" alt="route" width="100%">
 </p>
 
-## 🚀 News
+## 🚀 ニュース
 
 [2024.03.24] [2024 InternLM Challenge (Spring Split) | Innovation and Creativity Award](https://mp.weixin.qq.com/s/8Xh232cWplgg3qdfMdD0YQ).
 
-[2024.03.14] The model has been uploaded to HuggingFace.
+[2024.03.14] モデルがHuggingFaceにアップロードされました。
 
-[2024.03.08] The README was enhanced with the addition of a table of contents and a technical roadmap. Additionally, a new document, README_en-US.md, was created.
+[2024.03.08] READMEが強化され、目次と技術ロードマップが追加されました。また、新しいドキュメント、README_en-US.mdが作成されました。
 
-[2024.02.06] Docker deployment is now supported.
+[2024.02.06] Dockerデプロイメントがサポートされました。
 
-[2024.02.01] The first version of AMchat is deployed online at https://openxlab.org.cn/apps/detail/youngdon/AMchat 🚀
+[2024.02.01] AMchatの最初のバージョンが https://openxlab.org.cn/apps/detail/youngdon/AMchat でオンラインにデプロイされました 🚀
 
 
 
-## 🛠️ Usage
+## 🛠️ 使い方
 
-### Quick Start
+### クイックスタート
 
-1. Download the Model
+1. モデルのダウンロード
 
 <details>
-<summary>From ModelScope</summary>
+<summary>ModelScopeから</summary>
 
-Refer to [Downloading Models](https://www.modelscope.cn/docs/%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%8B%E8%BD%BD).
+[モデルのダウンロード](https://www.modelscope.cn/docs/%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%8B%E8%BD%BD)を参照してください。
 
 ```bash
 pip install modelscope
@@ -98,9 +98,9 @@ model_dir = snapshot_download('yondong/AMchat', cache_dir='./')
 </details>
 
 <details>
-<summary>From OpenXLab</summary>
+<summary>OpenXLabから</summary>
 
-Refer to [Downloading Models](https://openxlab.org.cn/docs/models/%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B.html).
+[モデルのダウンロード](https://openxlab.org.cn/docs/models/%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B.html)を参照してください。
 
 ```bash
 pip install openxlab
@@ -114,31 +114,31 @@ download(model_repo='youngdon/AMchat',
 
 </details>
 
-2. Local Deployment
+2. ローカルデプロイメント
 
 ```bash
 git clone https://github.com/AXYZdong/AMchat.git 
 python start.py
 ```
 
-3. Docker Deployment
+3. Dockerデプロイメント
 
 ```bash
 docker run -t -i --rm --gpus all -p 8501:8501 guidonsdocker/amchat:latest bash start.sh
 ```
 
-### Retraining
+### 再トレーニング
 
-#### Environment Setup
+#### 環境設定
 
-1. Clone this project
+1. このプロジェクトをクローン
 
 ```bash
 git clone https://github.com/AXYZdong/AMchat.git 
 cd AMchat
 ```
 
-2. Create a virtual environment
+2. 仮想環境を作成
 
 ```bash
 conda env create -f environment.yml
@@ -146,12 +146,12 @@ conda activate AMchat
 pip install -r requirements-raw.txt
 ```
 
-#### XTuner Fine-tuning
+#### XTuner微調整
 
-1. Prepare configuration files
+1. 設定ファイルを準備
 
 ```bash
-# List all built-in configurations
+# すべての組み込み設定をリストアップ
 xtuner list-cfg
 
 mkdir -p /root/math/data
@@ -160,7 +160,7 @@ mkdir /root/math/config && cd /root/math/config
 xtuner copy-cfg internlm2_chat_7b_qlora_oasst1_e3 .
 ```
 
-2. Model Download
+2. モデルのダウンロード
 
 ```bash
 mkdir -p /root/math/model
@@ -175,7 +175,7 @@ import os
 model_dir = snapshot_download('Shanghai_AI_Laboratory/internlm2-math-7b', cache_dir='/root/math/model')
 ```
 
-3. Modify configuration files
+3. 設定ファイルを変更
 
 ```bash
 cd /root/math/config
@@ -183,22 +183,22 @@ vim internlm_chat_7b_qlora_oasst1_e3_copy.py
 ```
 
 ```python
-# Change the model to local path
+# モデルをローカルパスに変更
 - pretrained_model_name_or_path = 'internlm/internlm-chat-7b'
 + pretrained_model_name_or_path = './internlm2-math-7b'
 
-# Change the training dataset to local path
+# トレーニングデータセットをローカルパスに変更
 - data_path = 'timdettmers/openassistant-guanaco'
 + data_path = './data'
 ```
 
-4. Start fine-tuning
+4. 微調整を開始
 
 ```bash
 xtuner train /root/math/config2/internlm2_chat_7b_qlora_oasst1_e3_copy.py
 ```
 
-5. Convert PTH model to HuggingFace model
+5. PTHモデルをHuggingFaceモデルに変換
 
 ```bash
 xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
@@ -206,23 +206,23 @@ xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
                          ./hf
 ```
 
-6. Merge HuggingFace model into a large language model
+6. HuggingFaceモデルを大言語モデルにマージ
 
 ```bash
 export MKL_SERVICE_FORCE_INTEL=1
 export MKL_THREADING_LAYER='GNU'
 
-# Original model parameter location
+# 元のモデルパラメータの場所
 export NAME_OR_PATH_TO_LLM=/root/math/model/Shanghai_AI_Laboratory/internlm2-math-7b
 
-# Hugging Face format parameter location
+# Hugging Face形式のパラメータの場所
 export NAME_OR_PATH_TO_ADAPTER=/root/math/config/hf
 
-# Final merged parameter location
+# 最終的なマージ後のパラメータの場所
 mkdir /root/math/config/work_dirs/hf_merge
 export SAVE_PATH=/root/math/config/work_dirs/hf_merge
 
-# Execute parameter merge
+# パラメータマージを実行
 xtuner convert merge \
     $NAME_OR_PATH_TO_LLM \
     $NAME_OR_PATH_TO_ADAPTER \
@@ -230,51 +230,51 @@ xtuner convert merge \
     --max-shard-size 2GB
 ```
 
-7. Demo
+7. デモ
 
 ```bash
 streamlit run web_demo.py --server.address=0.0.0.0 --server.port 7860
 ```
 
-#### OpenXLab Deployment
+#### OpenXLabデプロイメント
 
-To deploy AMchat on OpenXLab, simply fork this repository and then create a new project on OpenXLab. Associate the forked repository with the newly created project, and you will be able to deploy AMchat on OpenXLab.
+OpenXLabでAMchatをデプロイするには、このリポジトリをフォークし、OpenXLabで新しいプロジェクトを作成し、フォークしたリポジトリを新しく作成したプロジェクトに関連付けるだけです。
 
 <p align="center">
     <img src="assets/deploy_2.png" alt="Demo" width="100%">
 </p>
 
-- AMchat and InternLM2-Math-7B answer the same integral problem.
-  AMchat answers correctly, while InternLM2-Math-7B answers incorrectly.
+- AMchatとInternLM2-Math-7Bは、同じ積分問題に対して異なる回答をします。
+  AMchatは正しく回答し、InternLM2-Math-7Bは誤って回答します。
 
 <p align="center">
     <img src="assets/test_AMchat.png" alt="Demo" width="100%">
     <img src="assets/test_InternLM2-Math-7B.png" alt="Demo" width="100%">
 </p>
 
-#### LMDeploy Quantization
-- First, install LMDeploy
+#### LMDeploy量子化
+- まず、LMDeployをインストール
 
 ```shell
 pip install -U lmdeploy
 ```
 
-- Then, convert the model to `turbomind` format
+- 次に、モデルを`turbomind`形式に変換
 
-> --dst-path: You can specify the storage location for the converted model.
+> --dst-path: 変換後のモデルの保存場所を指定できます。
 
 ```shell
-lmdeploy convert internlm2-chat-7b  Model address to be converted --dst-path Converted model address
+lmdeploy convert internlm2-chat-7b  変換するモデルのアドレス --dst-path 変換後のモデルのアドレス
 ```
 
 - LMDeploy Chat
 
 ```shell
-lmdeploy chat turbomind Converted turbomind model address
+lmdeploy chat turbomind 変換後のturbomindモデルのアドレス
 ```
 
-#### OpenCompass Evaluation
-- Install OpenCompass
+#### OpenCompass評価
+- OpenCompassをインストール
 
 ```shell
 git clone https://github.com/open-compass/opencompass 
@@ -282,20 +282,20 @@ cd opencompass
 pip install -e .
 ```
 
-- Download and unzip the dataset
+- データセットをダウンロードして解凍
 
 ```shell
 cp /share/temp/datasets/OpenCompassData-core-20231110.zip /root/opencompass/
 unzip OpenCompassData-core-20231110.zip
 ```
 
-- Start evaluation!
+- 評価を開始！
 
 ```shell
 python run.py \
     --datasets math_gen \
-    --hf-path Model address \
-    --tokenizer-path Tokenizer address \
+    --hf-path モデルのアドレス \
+    --tokenizer-path トークナイザーのアドレス \
     --tokenizer-kwargs padding_side='left' truncation='left' trust_remote_code=True \
     --model-kwargs device_map='auto' trust_remote_code=True \
     --max-seq-len 2048 \
@@ -305,30 +305,30 @@ python run.py \
     --debug
 ```
 
-#### LMDeploy & OpenCompass Quantization and Evaluation
+#### LMDeploy & OpenCompass量子化と評価
 
 <details>
-<summary><strong> W4 </strong> Quantization Evaluation </summary>
+<summary><strong> W4 </strong> 量子化評価 </summary>
 
-- `W4` Quantization
+- `W4`量子化
 ```shell
-lmdeploy lite auto_awq Model address to be quantized --work-dir Quantized model address
+lmdeploy lite auto_awq 量子化するモデルのアドレス --work-dir 量子化後のモデルのアドレス
 ```
 
-- Convert to `TurbMind`
+- `TurbMind`に変換
 ```shell
-lmdeploy convert internlm2-chat-7b Quantized model address --model-format awq --group-size 128 --dst-path Converted model address
+lmdeploy convert internlm2-chat-7b 量子化後のモデルのアドレス  --model-format awq --group-size 128 --dst-path 変換後のモデルのアドレス
 ```
 
-- Evaluation `config` writing  
+- 評価`config`の作成
 ```python
 from mmengine.config import read_base
 from opencompass.models.turbomind import TurboMindModel
 
 with read_base():
- # choose a list of datasets   
+ # データセットのリストを選択   
  from .datasets.ceval.ceval_gen import ceval_datasets 
- # and output the results in a chosen format
+ # 結果を選択した形式で出力
 #  from .summarizers.medium import summarizer
 
 datasets = [*ceval_datasets]
@@ -336,7 +336,7 @@ datasets = [*ceval_datasets]
 internlm2_chat_7b = dict(
      type=TurboMindModel,
      abbr='internlm2-chat-7b-turbomind',
-     path='Converted model address',
+     path='変換後のモデルのアドレス',
      engine_config=dict(session_len=512,
          max_batch_size=2,
          rope_scaling_factor=1.0),
@@ -355,41 +355,40 @@ models = [internlm2_chat_7b]
 
 ```
 
-- Start evaluation!
+- 評価を開始！
 ```shell
-python run.py configs/eval_turbomind.py -w Specify the result save path
+python run.py configs/eval_turbomind.py -w 結果を保存するパスを指定
 ```
 
 </details>
 
 <details>
-<summary><strong> KV Cache </strong> Quantization Evaluation</summary>
+<summary><strong> KV Cache </strong> 量子化評価</summary>
 
-- Convert to `TurbMind`
+- `TurbMind`に変換
 ```shell
-lmdeploy convert internlm2-chat-7b Model path --dst-path Converted model path
+lmdeploy convert internlm2-chat-7b モデルのパス --dst-path 変換後のモデルのパス
 ```
 
-- Calculate and obtain quantization parameters
+- 量子化パラメータを計算して取得
 ```shell
-# Calculate
-lmdeploy lite calibrate Model path --calib-dataset 'ptb' --calib-samples 128 --calib-seqlen 2048 --work-dir Parameter save path
-# Get quantization parameters
-lmdeploy lite kv_qparams Parameter save path Converted model path/triton_models/weights/ --num-tp 1
+# 計算
+lmdeploy lite calibrate モデルのパス --calib-dataset 'ptb' --calib-samples 128 --calib-seqlen 2048 --work-dir パラメータを保存するパス
+# 量子化パラメータを取得
+lmdeploy lite kv_qparams パラメータを保存するパス 変換後のモデルのパス/triton_models/weights/ --num-tp 1
 ```
 
-- Change `quant_policy` to `4`, change the path in the above `config`
-- Start evaluation!
+- `quant_policy`を`4`に変更し、上記の`config`内のパスを変更
+- 評価を開始！
 ```shell
-python run.py configs/eval_turbomind.py -w Result save path
+python run.py configs/eval_turbomind.py -w 結果を保存するパス
 ```
 
 </details>
 
-- Result files and evaluation datasets can be obtained in the same directory [results](./results).
+- 結果ファイルと評価データセットは、同じディレクトリの[results](./results)で入手できます。
 
-## 💕 Acknowledgements
-
+## 💕 謝辞
 
 [**InternLM-tutorial**](https://github.com/InternLM/tutorial)
 
@@ -404,16 +403,16 @@ python run.py configs/eval_turbomind.py -w Result save path
   <img src="https://contrib.rocks/image?repo=AXYZdong/AMchat" />
 </a>
 
-## 🖊️ Citation
+## 🖊️ 引用
 
 ```bibtex
 @misc{2024AMchat,
-    title={AMchat: A large language model integrating advanced math concepts, exercises, and solutions},
+    title={AMchat: 高等数学の概念、演習問題、および解決策を統合した大規模言語モデル},
     author={AMchat Contributors},
     howpublished = {\url{https://github.com/AXYZdong/AMchat}},
     year={2024}
 }
 ```
 
-## License
-This project is released under the [Apache License 2.0.](https://github.com/InternLM/xtuner/blob/main/LICENSE) Please also adhere to the Licenses of models and datasets being used.
+## ライセンス
+このプロジェクトは、[Apache License 2.0](https://github.com/InternLM/xtuner/blob/main/LICENSE)の下でリリースされています。また、使用されるモデルとデータセットのライセンスにも従ってください。
