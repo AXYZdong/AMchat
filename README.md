@@ -13,7 +13,7 @@
 
 [![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url] | [🆕Update News](#-news) | [🤔Reporting Issues][Issues-url] 丨 [![bilibili][bilibili-image]][bilibili-url]
 
-[English](./README_en-US.md) | [简体中文](./README.md)
+[English](./README_en-US.md) | [简体中文](./README.md) | [日本語](./README_ja-JP.md)
 
 
 [license-image]: ./assets/license.svg
