@@ -1,8 +1,6 @@
 # LMDeploy 量化
 
 
-## 6 Steps for Deploying InternLM2-Math-Plus-7B
-
 参考教程 [link](https://github.com/InternLM/Tutorial/tree/camp2/lmdeploy#3lmdeploy%E6%A8%A1%E5%9E%8B%E9%87%8F%E5%8C%96lite),
 我们通过六个步骤,演示如何在InternStudio平台上部署一个量化优化的InternLM2-Math-Plus-7B模型API服务,并使用命令行客户端与之交互。详情参见 [link](https://swze06osuex.feishu.cn/docx/VS1Dd6QGvoBLLhxXB3zcVssInvc?from=from_copylink)
 
