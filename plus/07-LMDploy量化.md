@@ -14,18 +14,20 @@
 
 [//]: # (![img_1.png]&#40;images/img_1.png&#41;)
 
+
+量化的基本流程如下:
+
 1. 中心点（ZP）的计算
-$$ZP = \frac{\text{min} + \text{max}}{2}$$
+   $$ZP = \frac{\text{min} + \text{max}}{2}$$
 
 2. 缩放因子（S）的计算
-$$S = \frac{\text{max} - \text{min}}{255}$$
+   $$S = \frac{\text{max} - \text{min}}{255}$$
 
 3. 量化值（q）的计算
-$$q = \text{round}\left(\frac{-ZP}{S}\right)$$
+   $$q = \text{round}\left(\frac{-ZP}{S}\right)$$
 
 4. 反量化, 最终值（f）的计算
-$$f = q \times S + ZP$$
-
+   $$f = q \times S + ZP$$
 
 当然,量化也不是免费的午餐。它不可避免地引入了一些精度损失。但在超大规模的模型中,这种损失往往可以忽略不计。我们可以通过量化感知训练、混合精度量化等技术,进一步减少量化带来的精度损失。总的来说,量化在访存优化上的收益,远大于其精度损失的代价。
 除了量化,KV
@@ -99,8 +101,6 @@ lmdeploy serve api_client http://localhost:23333
 
 ![img_3.png](images/img_3.png)
 
-##  补充说明: 环境配置
+## 补充说明: 环境配置
 
 环境配置请参考 [link](https://github.com/InternLM/Tutorial/tree/camp2/lmdeploy#3lmdeploy%E6%A8%A1%E5%9E%8B%E9%87%8F%E5%8C%96lite)。
-
-
