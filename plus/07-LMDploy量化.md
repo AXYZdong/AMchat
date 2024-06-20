@@ -7,7 +7,7 @@
 访存瓶颈是指,模型的权重数据量远大于GPU的显存容量,需要在内存和显存之间频繁地交换数据,而内存的访问速度远慢于GPU的计算速度,成为了性能的主要限制因素。
 计算资源限制是指,单个GPU的算力难以满足超大模型的计算需求,需要采用模型并行等技术,将模型切分到多个GPU上进行计算。
 
-![img.png](images/img.png)
+[//]: # (![img.png]&#40;images/img.png&#41;)
 
 量化是应对访存瓶颈的有效武器。它通过将模型权重从32位浮点数(FP32)量化到8位整数(INT8)甚至4位整数(INT4)
 ,可以大大减少模型的内存占用和访存量。以INT4量化为例,它可以将模型体积压缩到原来的1/8,将访存量减少到1/4。这意味着,在相同的硬件条件下,我们可以部署更大的模型,或者以更低的延迟实现推理。
@@ -19,7 +19,7 @@
 Cache是另一种提速的利器,特别是对于Transformer类模型。在Transformer的推理过程中,每一层都要计算Key和Value矩阵,而这些矩阵在序列的不同位置是相同的。如果每次都重新计算这些矩阵,就会有大量的重复计算,浪费宝贵的算力。20B模型在
 batch size 为 16，输入序列为 512 tokens，输出 32 tokens 的情况下，KV缓存会占用约10.3GB的显存.
 
-![img_2.png](images/img_2.png)
+[//]: # (![img_2.png]&#40;images/img_2.png&#41;)
 
 KV Cache的思路很简单:
 将每一层的Key和Value矩阵缓存下来,在后续的计算中直接读取,避免重复计算。这就像是为Transformer建立了一个专属的"查表"
@@ -90,3 +90,7 @@ lmdeploy serve api_client http://localhost:23333
 
 环境配置请参考 [link](https://github.com/InternLM/Tutorial/tree/camp2/lmdeploy#3lmdeploy%E6%A8%A1%E5%9E%8B%E9%87%8F%E5%8C%96lite)。
 
+
+## TODO:
+ 
+[] 把相关步骤的结果图放入
