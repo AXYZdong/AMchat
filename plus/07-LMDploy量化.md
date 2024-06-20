@@ -104,6 +104,3 @@ lmdeploy serve api_client http://localhost:23333
 环境配置请参考 [link](https://github.com/InternLM/Tutorial/tree/camp2/lmdeploy#3lmdeploy%E6%A8%A1%E5%9E%8B%E9%87%8F%E5%8C%96lite)。
 
 
-## TODO:
- 
-[x] 把相关步骤的结果图放入
