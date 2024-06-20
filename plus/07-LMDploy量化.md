@@ -1,5 +1,55 @@
 # LMDeploy 量化
 
+
+## 6 Steps for Deploying InternLM2-Math-Plus-7B
+
+参考教程 [link](https://github.com/InternLM/Tutorial/tree/camp2/lmdeploy#3lmdeploy%E6%A8%A1%E5%9E%8B%E9%87%8F%E5%8C%96lite),
+我们通过六个步骤,演示如何在InternStudio平台上部署一个量化优化的InternLM2-Math-Plus-7B模型API服务,并使用命令行客户端与之交互。详情参见 [link](https://swze06osuex.feishu.cn/docx/VS1Dd6QGvoBLLhxXB3zcVssInvc?from=from_copylink)
+
+1. 在InternStudio平台上创建开发机,选择合适的镜像和GPU资源,进入开发机。创建并激活conda环境,安装lmdeploy。
+2. 使用 ModelScope 下载模型 InternLM2-Math-Plus-7B.
+
+```python
+import torch
+import os
+from modelscope import snapshot_download, AutoModel, AutoTokenizer
+
+model_dir = snapshot_download('Shanghai_AI_Laboratory/internlm2-math-plus-7b', cache_dir='/root/ft-math',
+                              revision='master')
+model_dir
+```
+
+3. 安装依赖库,然后使用lmdeploy lite指令对InternLM2-Math-Plus-7B模型进行W4A16量化。量化后的模型会保存在指定目录。
+
+```bash
+lmdeploy lite auto_awq \
+   /root/ft-math/Shanghai_AI_Laboratory/internlm2-math-plus-7b \
+  --calib-dataset 'ptb' \
+  --calib-samples 128 \
+  --calib-seqlen 1024 \
+  --w-bits 4 \
+  --w-group-size 128 \
+  --work-dir /root/ft-math/Shanghai_AI_Laboratory/internlm2-math-plus-7b-4bit
+```
+
+4. 运行lmdeploy serve api_server指令,以API Server方式启动lmdeploy。指定使用量化后的模型,将KV
+   Cache占用比例设置为0.4,配置服务器名称、端口号等参数。API服务器启动后请勿关闭终端窗口。
+
+```bash
+lmdeploy chat /root/ft-math/Shanghai_AI_Laboratory/internlm2-math-plus-7b-4bit --model-format awq --cache-max-entry-count 0.5
+```
+
+5. 运行lmdeploy serve api_client指令,启动命令行客户端并连接到API服务器。
+
+```bash
+lmdeploy serve api_client http://localhost:23333
+```
+
+通过以上步骤,即可在InternStudio平台上部署一个量化优化的InternLM2-Math-Plus-7B模型API服务,并使用命令行客户端与之交互,利用该模型强大的数学计算和数学知识解释能力。
+
+![img_3.png](images/img_3.png)
+
+
 ## Background: 大模型推理的挑战
 
 在部署大规模语言模型时,我们面临着两大挑战:**访存瓶颈**和**计算资源限制**。
@@ -49,53 +99,6 @@ Cache优化后,速度提升到了100个token/秒,提升了10倍。这样的性�
    严格来说，量化并不直接减少矩阵乘法或卷积等基础运算的计算量，因为这些运算通常是在高精度下进行的。量化的主要优势在于减少了访存量，特别是权重的读取量，从而缓解了访存瓶颈。如果能利用专门的低精度计算单元（如NVIDIA
    Tensor Core），也可以提高计算效率。
 
-## 6 Steps for Deploying InternLM2-Math-Plus-7B
-
-参考教程 [link](https://github.com/InternLM/Tutorial/tree/camp2/lmdeploy#3lmdeploy%E6%A8%A1%E5%9E%8B%E9%87%8F%E5%8C%96lite),
-我们通过六个步骤,演示如何在InternStudio平台上部署一个量化优化的InternLM2-Math-Plus-7B模型API服务,并使用命令行客户端与之交互。详情参见 [link](https://swze06osuex.feishu.cn/docx/VS1Dd6QGvoBLLhxXB3zcVssInvc?from=from_copylink)
-
-1. 在InternStudio平台上创建开发机,选择合适的镜像和GPU资源,进入开发机。创建并激活conda环境,安装lmdeploy。
-2. 使用 ModelScope 下载模型 InternLM2-Math-Plus-7B.
-
-```python
-import torch
-import os
-from modelscope import snapshot_download, AutoModel, AutoTokenizer
-
-model_dir = snapshot_download('Shanghai_AI_Laboratory/internlm2-math-plus-7b', cache_dir='/root/ft-math',
-                              revision='master')
-model_dir
-```
-
-3. 安装依赖库,然后使用lmdeploy lite指令对InternLM2-Math-Plus-7B模型进行W4A16量化。量化后的模型会保存在指定目录。
-
-```bash
-lmdeploy lite auto_awq \
-   /root/ft-math/Shanghai_AI_Laboratory/internlm2-math-plus-7b \
-  --calib-dataset 'ptb' \
-  --calib-samples 128 \
-  --calib-seqlen 1024 \
-  --w-bits 4 \
-  --w-group-size 128 \
-  --work-dir /root/ft-math/Shanghai_AI_Laboratory/internlm2-math-plus-7b-4bit
-```
-
-4. 运行lmdeploy serve api_server指令,以API Server方式启动lmdeploy。指定使用量化后的模型,将KV
-   Cache占用比例设置为0.4,配置服务器名称、端口号等参数。API服务器启动后请勿关闭终端窗口。
-
-```bash
-lmdeploy chat /root/ft-math/Shanghai_AI_Laboratory/internlm2-math-plus-7b-4bit --model-format awq --cache-max-entry-count 0.5
-```
-
-5. 运行lmdeploy serve api_client指令,启动命令行客户端并连接到API服务器。
-
-```bash
-lmdeploy serve api_client http://localhost:23333
-```
-
-通过以上步骤,即可在InternStudio平台上部署一个量化优化的InternLM2-Math-Plus-7B模型API服务,并使用命令行客户端与之交互,利用该模型强大的数学计算和数学知识解释能力。
-
-![img_3.png](images/img_3.png)
 
 ## 补充说明: 环境配置
 
