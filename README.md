@@ -63,6 +63,8 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 
 ## 🚀 News
 
+[2024.06.21] 更新README，InternLM2-Math-Plus-7B 模型微调。
+
 [2024.03.24] [2024浦源大模型系列挑战赛（春季赛）Top12](https://mp.weixin.qq.com/s/8Xh232cWplgg3qdfMdD0YQ)，创新创意奖。
 
 [2024.03.14] 模型上传至HuggingFace。
@@ -72,7 +74,6 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 [2024.02.06] 支持了Docker部署。
 
 [2024.02.01] AMchat第一版部署上线 https://openxlab.org.cn/apps/detail/youngdon/AMchat 🚀
-
 
 
 ## 🛠️ 使用方法
@@ -144,7 +145,7 @@ cd AMchat
 ```bash
 conda env create -f environment.yml
 conda activate AMchat
-pip install -r requirements-raw.txt
+pip install xtuner
 ```
 
 #### XTuner微调
@@ -178,6 +179,10 @@ model_dir = snapshot_download('Shanghai_AI_Laboratory/internlm2-math-7b', cache_
 
 3. 修改配置文件
 
+> 仓库中 `config` 文件夹下已经提供了一个微调的配置文件，可以参考 `internlm_chat_7b_qlora_oasst1_e3_copy.py`。
+> 可以直接使用，注意修改  `pretrained_model_name_or_path` 和 `data_path` 的路径。
+
+
 ```bash
 cd /root/math/config
 vim internlm_chat_7b_qlora_oasst1_e3_copy.py
@@ -196,7 +201,7 @@ vim internlm_chat_7b_qlora_oasst1_e3_copy.py
 4. 开始微调
 
 ```bash
-xtuner train /root/math/config2/internlm2_chat_7b_qlora_oasst1_e3_copy.py
+xtuner train /root/math/config/internlm2_chat_7b_qlora_oasst1_e3_copy.py
 ```
 
 5. PTH 模型转换为 HuggingFace 模型
@@ -313,11 +318,14 @@ python run.py \
 ```shell
 lmdeploy lite auto_awq 要量化的模型地址 --work-dir 量化后的模型地址
 ```
+
 - 转化为`TurbMind`
 ```shell
 lmdeploy convert internlm2-chat-7b 量化后的模型地址  --model-format awq --group-size 128 --dst-path 转换后的模型地址
 ```
+
 - 评测`config`编写  
+
 ```python
 from mmengine.config import read_base
 from opencompass.models.turbomind import TurboMindModel
@@ -381,7 +389,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 
 </details>
 
-- 结果文件与评测数据集可在同目录文件[results](./results)中获取
+- 结果文件与评测数据集可在同目录文件[results](./results)中获取。
 
 
 ## 💕 致谢
@@ -391,6 +399,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 - 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，RAG框架）
 - 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集，RAG内容整理）
 - 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 数据收集，数据集整理及增强，模型量化与评测，RAG推理与验证）
+- 程宏 (书生·浦语实战营助教&Datawhale鲸英助教 InternLM2-Math-Plus-7B 模型微调)
 - 揭熔阳 （Datawhale成员 哈尔滨工业大学(威海) 数据收集 RAG内容整理）
 - 彭琛（Datawhale成员 数据收集）
 - 王新茗 （数据收集）
@@ -398,6 +407,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 - 王睿玥 （Northeastern University 数据收集）
 - 陈逸涵 （Datawhale成员 北京邮电大学 数据收集）
 - guidons （东北大学 docker部署）
+- eltociear （Board member at I-Tecnology Co., Ltd.，增加 Japanese README）
 
 ### 特别鸣谢
 

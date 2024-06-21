@@ -143,7 +143,7 @@ cd AMchat
 ```bash
 conda env create -f environment.yml
 conda activate AMchat
-pip install -r requirements-raw.txt
+pip install xtuner
 ```
 
 #### XTuner微調整
@@ -176,6 +176,9 @@ model_dir = snapshot_download('Shanghai_AI_Laboratory/internlm2-math-7b', cache_
 ```
 
 3. 設定ファイルを変更
+
+> GitHubのリポジトリでは、`config` ディレクトリの下に微調整された設定ファイルが提供されています。`internlm_chat_7b_qlora_oasst1_e3_copy.py`を参照してください。
+> 直接使用できますが、`pretrained_model_name_or_path` と `data_path` のパスを変更するのをお忘れなく。
 
 ```bash
 cd /root/math/config
