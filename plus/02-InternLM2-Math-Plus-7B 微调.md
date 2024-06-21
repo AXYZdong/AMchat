@@ -2,7 +2,7 @@
 
 ## 环境搭建
 
-请参考README.md, 本教程重点为如何微调新模型InternLM2-Math-Plus-7B.
+请参考[README.md](../README.md), 本教程重点为如何微调新模型[InternLM2-Math-Plus-7B](https://modelscope.cn/models/Shanghai_AI_Laboratory/internlm2-math-plus-7b).
 
 ## XTuner微调
 
@@ -48,7 +48,7 @@ vim internlm_chat_7b_qlora_oasst1_e3_copy.py
 
 ```bash
 # 采用deepspeed_zero2节省更多显存, 降低微调硬件需求
-xtuner train /root/math/config2/internlm2_chat_7b_qlora_oasst1_e3_copy.py  --deepspeed deepspeed_zero2
+xtuner train internlm2_chat_7b_qlora_oasst1_e3_copy.py  --deepspeed deepspeed_zero2
 ```
 
 5. PTH 模型转换为 HuggingFace 模型
