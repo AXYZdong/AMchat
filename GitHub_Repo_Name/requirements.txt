@@ -3,3 +3,4 @@ transformers
 sentencepiece
 einops
 accelerate
+tiktoken
