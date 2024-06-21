@@ -243,8 +243,8 @@ def main():
     model, tokenizer = load_model()
     print('load model end.')
 
-    user_avator = 'assets/user.png'
-    robot_avator = 'assets/amchat_robot.png'
+    user_avator = '../assets/user.png'
+    robot_avator = '../assets/robot.png'
 
     st.title('💬 AMchat (高等数学大模型) 🔢')
 
