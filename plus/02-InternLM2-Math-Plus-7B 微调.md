@@ -86,8 +86,11 @@ xtuner convert merge \
 
 7. Demo
 
+可以自行对比微调后的模型和微调之前的效果差
+
 ```bash
-streamlit run web_demo_7b_plus.py --server.address=0.0.0.0 --server.port 7860
+streamlit run amchat_web_demo.py --server.address=0.0.0.0 --server.port 7860
+streamlit run amchat_web_demo_o.py --server.address=0.0.0.0 --server.port 7861
 ```
 
 8. 微调后的模型下载地址
