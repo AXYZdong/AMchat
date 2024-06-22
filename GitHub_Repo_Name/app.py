@@ -30,7 +30,7 @@ from transformers.utils import logging
 from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
 
 logger = logging.get_logger(__name__)
-
+base_path = './AMChat_internlm2-math-plus-7b_Hong'
 
 @dataclass
 class GenerationConfig:
