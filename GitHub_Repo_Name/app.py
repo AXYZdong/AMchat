@@ -28,12 +28,9 @@ from transformers.generation.utils import (LogitsProcessorList,
 from transformers.utils import logging
 
 from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
-from openxlab.model import download
 
 logger = logging.get_logger(__name__)
 
-download(model_repo='youngdon/AMchat',
-        output='model')
 
 @dataclass
 class GenerationConfig:
@@ -183,10 +180,11 @@ def on_btn_click():
 
 @st.cache_resource
 def load_model():
-    model = AutoModelForCausalLM.from_pretrained(base_path,trust_remote_code=True, torch_dtype=torch.float16).cuda()
-    tokenizer = AutoTokenizer.from_pretrained(base_path,trust_remote_code=True)
-    # model = (AutoModelForCausalLM.from_pretrained('model',trust_remote_code=True).to(torch.bfloat16).cuda())
-    # tokenizer = AutoTokenizer.from_pretrained('model',trust_remote_code=True)
+    model = (AutoModelForCausalLM.from_pretrained('internlm/internlm2-chat-7b',
+                                                  trust_remote_code=True).to(
+                                                      torch.bfloat16).cuda())
+    tokenizer = AutoTokenizer.from_pretrained('internlm/internlm2-chat-7b',
+                                              trust_remote_code=True)
     return model, tokenizer
 
 
@@ -215,9 +213,9 @@ cur_query_prompt = '<|im_start|>user\n{user}<|im_end|>\n\
 
 def combine_history(prompt):
     messages = st.session_state.messages
-    meta_instruction = ('You are a professional assistant for Advanced Mathematics answers, '
-                        'and developed by AMchat Group from China.'
-                        )
+    meta_instruction = ('You are InternLM (书生·浦语), a helpful, honest, '
+                        'and harmless AI assistant developed by Shanghai '
+                        'AI Laboratory (上海人工智能实验室).')
     total_prompt = f"<s><|im_start|>system\n{meta_instruction}<|im_end|>\n"
     for message in messages:
         cur_content = message['content']
@@ -241,7 +239,7 @@ def main():
     user_avator = 'assets/user.png'
     robot_avator = 'assets/robot.png'
 
-    st.title('💬 AMchat (高等数学大模型) 🔢')
+    st.title('InternLM2-Chat-7B')
 
     generation_config = prepare_generation_config()
 
