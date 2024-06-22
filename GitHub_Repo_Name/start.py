@@ -1,6 +1,6 @@
 import os
 
-base_path = './AMChat_internlm2-math-plus-7b_Hong'
+base_path = './AMChat_internlm2-math-plus-7b'
 # download repo to the base_path directory using git
 os.system('apt install git')
 os.system('apt install git-lfs')
