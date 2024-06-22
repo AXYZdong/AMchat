@@ -63,6 +63,10 @@ AM (Advanced Mathematics) Chatは、数学知識、高等数学の問題、お�
 
 ## 🚀 ニュース
 
+[2024.06.22] InternLM2-Math-Plus-1.8B モデルのファインチューニングを行い、小規模データセットをオープンソース化しました。
+
+[2024.06.21] READMEを更新しました。InternLM2-Math-Plus-7B モデルのファインチューニングを行いました。
+
 [2024.03.24] [2024 InternLM Challenge (Spring Split) | Innovation and Creativity Award](https://mp.weixin.qq.com/s/8Xh232cWplgg3qdfMdD0YQ).
 
 [2024.03.14] モデルがHuggingFaceにアップロードされました。

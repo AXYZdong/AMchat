@@ -63,6 +63,10 @@ If you find this project helpful, feel free to ⭐ Star it and help more people 
 
 ## 🚀 News
 
+[2024.06.22] InternLM2-Math-Plus-1.8B model fine-tuning, open-sourced a small-scale dataset.
+
+[2024.06.21] Updated the README. Performed fine-tuning on the InternLM2-Math-Plus-7B model.
+
 [2024.03.24] [2024 InternLM Challenge (Spring Split) | Innovation and Creativity Award](https://mp.weixin.qq.com/s/8Xh232cWplgg3qdfMdD0YQ).
 
 [2024.03.14] The model has been uploaded to HuggingFace.

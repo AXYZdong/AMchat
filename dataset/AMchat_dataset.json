@@ -1,0 +1,402 @@
+[
+    {
+        "conversation": [
+            {
+                "input": "设 a_{n}=\\frac{3}{2} \\int_{0}^{\\frac{n}{n+1}} x^{n-1} \\sqrt{1+x^{n}} \\mathrm{~d} x, 则 \\lim _{n \\rightarrow \\infty} n a_{n}=\\\\",
+                "output": "\\left(1+\\mathrm{e}^{-1}\\right)^{\\frac{3}{2}}-1 \\\\ 解\\\\\\\\\\begin{aligned}\\\\a_{n} & =\\frac{3}{2} \\int_{0}^{\\frac{n}{n+1}} x^{n-1} \\sqrt{1+x^{n}} \\mathrm{~d} x=\\frac{3}{2} \\cdot \\frac{1}{n} \\int_{0}^{\\frac{n}{n+1}}\\left(1+x^{n}\\right)^{\\frac{1}{2}} \\mathrm{~d}\\left(1+x^{n}\\right) \\\\\\\\& =\\left.\\frac{3}{2} \\cdot \\frac{1}{n} \\cdot \\frac{2}{3}\\left(1+x^{n}\\right)^{\\frac{3}{2}}\\right|_{0} ^{\\frac{n}{n+1}}=\\frac{1}{n}\\left\\{\\left[1+\\left(\\frac{n}{n+1}\\right)^{n}\\right]^{\\frac{3}{2}}-1\\right\\} .\\\\\\end{aligned}\\\\\\\\\\\\由 \\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{n}=\\mathrm{e}, 知 \\lim _{n \\rightarrow \\infty}\\left(\\frac{n}{n+1}\\right)^{n}=\\frac{1}{\\mathrm{e}}, 故\\\\\\\\\\lim _{n \\rightarrow \\infty} n a_{n}=\\lim _{n \\rightarrow \\infty}\\left\\{\\left[1+\\left(\\frac{n}{n+1}\\right)^{n}\\right]^{\\frac{3}{2}}-1\\right\\}=\\left(1+\\mathrm{e}^{-1}\\right)^{\\frac{3}{2}}-1 .\\\\"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x)=\\left\\{\\begin{array}{ll}\\frac{1-\\cos x}{\\sqrt{x}}, & x>0, \\\\ x^{2} \\cdot \\varphi(x), & x \\leqslant 0,\\end{array}\\right. 其中 \\varphi(x) 是有界函数, 则 f(x) 在 x=0 处 (\\quad)\\\\A. 可导\\\\B. 连续, 但不可导\\\\C. 极限存在, 但不连续\\\\D. 极限不存在",
+                "output": "解：\\lim _{x \\rightarrow 0^{+}} f(x)=\\lim _{x \\rightarrow 0^{+}} \\frac{1-\\cos x}{\\sqrt{x}}=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{2} x^{2}}{\\sqrt{x}}=0, \\lim _{x \\rightarrow 0^{-}} f(x)=\\lim _{x \\rightarrow 0^{-}} x^{2} \\cdot \\varphi(x)=0,而 f(0)=0, 故 f(x) 在 x=0 处连续.\\\\f_{+}^{\\prime}(0)=\\lim _{x \\rightarrow 0^{+}} \\frac{f(x)-f(0)}{x-0}=\\lim _{x \\rightarrow 0^{+}} \\frac{1-\\cos x}{x \\sqrt{x}}=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{2} x^{2}}{x \\sqrt{x}}=0, \\\\\\\\f_{-}^{\\prime}(0)=\\lim _{x \\rightarrow 0^{-}} \\frac{f(x)-f(0)}{x-0}=\\lim _{x \\rightarrow 0^{-}} \\frac{x^{2} \\varphi(x)}{x}=0,\\\\\\\\\\\\故 f_{+}^{\\prime}(0)=f_{-}^{\\prime}(0)=0, 所以 f^{\\prime}(0)=0, A 正确."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "证明下列不等式:\\\\(I) 当 0<x<\\pi 时, 有 \\sin \\frac{x}{2}>\\frac{x}{\\pi};\\\\(II) 当 \\mathrm{e}<a<b 时, 有 a^{b}>b^{a};\\\\(III) 当 x>0 时, 有 \\left(x^{2}-1\\right) \\ln x \\geqslant(x-1)^{2};\\\\(IV) 若 \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=1, 且 f^{\\prime \\prime}(x)>0, 有 f(x) \\geqslant x.",
+                "output": "解：( I ) 只需证 \\quad \\frac{\\sin \\frac{x}{2}}{x}>\\frac{1}{\\pi}, 0<x<\\pi.\\\\\\\\令 f(x)=\\frac{\\sin \\frac{x}{2}}{x}-\\frac{1}{\\pi}, 则 f^{\\prime}(x)=\\frac{\\frac{x}{2} \\cos \\frac{x}{2}-\\sin \\frac{x}{2}}{x^{2}}=\\frac{\\left(\\frac{x}{2}-\\tan \\frac{x}{2}\\right) \\cos \\frac{x}{2}}{x^{2}}.\\\\当 0<x<\\pi 时, \\cos \\frac{x}{2}>0, \\tan \\frac{x}{2}>\\frac{x}{2}, 故 f^{\\prime}(x)<0, 从而 f(x) 单调减少, 于是 f(x)> f(\\pi)=0, 即\\\\\\\\f(x)=\\frac{\\sin \\frac{x}{2}}{x}-\\frac{1}{\\pi}>0 .\\\\\\\\(II) 要证 a^{b}>b^{a}, 只需证 \\mathrm{e}^{b \\ln a}>\\mathrm{e}^{a \\ln b}, 即证 b \\ln a>a \\ln b.\\\\\\\\令 f(x)=x \\ln a-a \\ln x, 且 x \\geqslant a, 则 f^{\\prime}(x)=\\ln a-\\frac{a}{x}, 由 \\mathrm{e}<a<b, 得\\\\\\\\\\ln b>\\ln a>\\ln \\mathrm{e}=1,\\\\\\\\\\\\故 f^{\\prime}(x)>1-\\frac{a}{x} \\geqslant 0, 从而当 x \\geqslant a 时, f(x) 严格单调增加, 于是 f(b)>f(a), 即 b \\ln a>a \\ln b, 所以原不等式成立.\\\\(III) 令 f(x)=\\left(x^{2}-1\\right) \\ln x-(x-1)^{2}, 则\\\\\\\\\\begin{array}{c}\\\\f^{\\prime}(x)=2 x \\ln x-x+2-\\frac{1}{x}, f^{\\prime}(1)=0, \\\\\\\\f^{\\prime \\prime}(x)=2 \\ln x+1+\\frac{1}{x^{2}}, f^{\\prime \\prime}(1)>0,\\\\\\end{array}\\\\\\f^{\\prime \\prime \\prime}(x)=\\frac{2\\left(x^{2}-1\\right)}{x^{3}} .\\\\\\\\当0<x<1 时, f^{\\prime \\prime \\prime}(x)<0; 当 1<x<+\\infty 时, f^{\\prime \\prime \\prime}(x)>0, 故 f^{\\prime \\prime}(x) 在 (0,1) 内单调减少, 在 (1,+\\infty) 内单调增加, 因而 f^{\\prime \\prime}(x) 在 x=1 处取到最小值. 又 f^{\\prime \\prime}(1)>0, 所以当 x \\in (0,+\\infty) 时, f^{\\prime \\prime}(x)>0, 从而 f^{\\prime}(x) 在 (0,+\\infty) 内单调增加. 又 f^{\\prime}(1)=0, 可知当 0<x< 1 时, f^{\\prime}(x)<0; 当 1<x<+\\infty 时, f^{\\prime}(x)>0. 同理可知 f(x) 在 x=1 处取到最小值, 又 f(1)=0, 所以 f(x)>0, 故原不等式成立.\\\\(IV) 由已知, 有\\\\f(0)=\\lim _{x \\rightarrow 0} f(x)=\\lim _{x \\rightarrow 0} x \\cdot \\frac{f(x)}{x}=0, \\\\\\\\f^{\\prime}(0)=\\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x-0}=\\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=1 .\\\\\\\\\\\\由泰勒公式, 有\\\\\\\\f(x)=f(0)+f^{\\prime}(0) x+\\frac{f^{\\prime \\prime}(\\xi)}{2 !} x^{2}=x+\\frac{f^{\\prime \\prime}(\\xi)}{2} x^{2}(\\xi \\text { 介于 } x \\text { 与 } 0 \\text { 之间 }) ，\\\\\\\\\\\\由 f^{\\prime \\prime}(x)>0, 知 f(x) \\geqslant x, 故原不等式成立."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 0<x_{1} \\leq \\pi, x_{n-1}=\\sin x_{n}.\\\\( I ) 证明: \\lim _{n \\rightarrow \\infty} x_{n} 存在, 并求值;\\\\(II) 求 \\lim _{n \\rightarrow \\infty}\\left(\\frac{x_{n+1}}{x_{n}}\\right)^{\\frac{1}{x_{n}^{2}}}.\\\\",
+                "output": "解 (I ）显然, x_{n}>0 有下界. 又 \\sin x<x(x>0), 故 x_{n+1}=\\sin x_{n}<x_{n}, 所以 \\left\\{x_{n}\\right\\} 单调减少, 故 \\lim _{n \\rightarrow \\infty} x_{n} 存在, 记为 A . x_{n+1}=\\sin x_{n} 两边同时求极限, 得 A=\\sin A, 故 A=0,即 \\lim _{n \\rightarrow \\infty} x_{n}=0.\\\\( II )\\\\\\\\\\begin{aligned}\\\\\\lim _{n \\rightarrow \\infty}\\left(\\frac{x_{n+1}}{x_{n}}\\right)^{\\frac{1}{r_{n}^{2}}} & =\\lim _{n \\rightarrow \\infty}\\left(\\frac{\\sin x_{n}}{x_{n}}\\right)^{\\frac{1}{t_{n}^{2}}}=\\lim _{t \\rightarrow 0}\\left(\\frac{\\sin t}{t}\\right)^{\\frac{1}{t^{2}}}(1 \\text { 型 }) \\\\\\\\& =\\lim _{t \\rightarrow 0}\\left[\\left(1+\\frac{\\sin t-t}{t}\\right)^{\\frac{t}{\\sin t-t}}\\right]^{\\frac{\\sin t-1}{t^{3}}} \\cdot \\\\\\\\\\lim _{t \\rightarrow 0} \\frac{\\sin t-t}{t^{3}} & =\\lim _{t \\rightarrow 0} \\frac{\\cos t-1}{3 t^{2}}=\\lim _{t \\rightarrow 0}-\\frac{1}{2} t^{2}=-\\frac{1}{6} \\cdot t^{2}\\\\\\end{aligned}\\\\\\\\\\\\而\\\\所以原式 =\\mathrm{e}^{-\\frac{1}{6}}.\\\\"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 y_{1}(x), y_{2}(x) 是 y^{\\prime}+P(x) y=0 的两个不同特解, 其中 P(x) 在 (-\\infty,+\\infty) 内连续, 且 P(x) 不恒为 0 , 则下列结论中错误的是 ( ).\\\\A. y_{1}(x)-y_{2}(x)= 常数\\\\B. C\\left[y_{1}(x)-y_{2}(x)\\right] 是方程的通解\\\\C. y_{1}(x)-y_{2}(x) 在任一点不为 0\\\\D. \\frac{y_{2}(x)}{y_{1}(x)} \\equiv 常数 \\left(y_{1}(x) \\neq 0\\right)",
+                "output": "A.解：依题意,y_{1}(x)-y_{2}(x)是y^{\\prime}+P(x)y=0的解。当P(x)不恒为0时，非零常数不可能是y^{\\prime}+P(x)y=0的解，故选A。D选项正确,因为y^{\\prime}+P(x)y=0的通解为y=Ce^{-\\int P(x)\\mathrm{d}x},所以任意两个解相差一个常数因子。C选项正确，因y^{\\prime}+P(x)y=0两个不同的解不能满足相同的初始条件。事实上，假设存在x_{0}，使得y_{1}(x_{0})=y_{2}(x_{0})，令y_{0}=y_{1}(x)-y_{2}(x)，则y_{0}(x)是该方程的解，且满足初始条件y_{0}(x_{0})=0,根据微分方程解的存在唯一性定理，知y_{0}(x)恒为零，故y_{1}(x)=y_{2}(x)，与已知条件矛盾"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "二重积分 $I=\\int_{1}^{2}\\!\\mathrm{d}x\\int_{\\sqrt{x}}^{x}\\sin\\,\\frac{\\pi x}{2y}\\mathrm{d}y+\\int_{2}^{4}\\!\\mathrm{d}x\\int_{\\sqrt{x}}^{2}\\sin\\,\\frac{\\pi x}{2y}\\mathrm{d}y=$ ",
+                "output": "解：由已知，作出积分区域 ${\\boldsymbol{D}}.$ 交换积分顺序，\n$$\n\\begin{array}{c}{{I=\\int_{1}^{2}\\mathrm{dy}\\int_{y}^{y^2}\\sin\\frac{\\pi x}{2y}\\mathrm{d}x=\\int_{1}^{2}\\frac{2y}{\\pi}\\Bigl(\\cos\\frac{\\pi}{2}-\\cos\\frac{\\pi}{2}y\\Bigr)\\mathrm{d}y}}\\\\ {{=-\\frac{2}{\\pi}\\int_{1}^{2}y\\cos\\frac{\\pi}{2}y\\mathrm{d}y=\\frac{4}{\\pi^{3}}(2+\\pi).}}\\end{array} \n$$"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x) 在 [0,1] 上连续, 在 (0,1) 内可导, f(x) \\neq 0, 且 \\lim _{x \\rightarrow 0^{-}} \\frac{f(x+1)}{x} 存在, 证明:\\\\( I ) 存在 \\xi \\in(0,1), 使得 \\frac{1-\\mathrm{e}}{\\mathrm{e} \\int_{0}^{1} f(t) \\mathrm{d} t}=-\\frac{1}{\\mathrm{e}^{\\xi} f(\\xi)};\\\\( II ) 存在 \\eta \\in(0,1), 使得 \\mathrm{e} \\int_{0}^{1} f(t) \\mathrm{d} t=(\\mathrm{e}-1) \\mathrm{e}^{\\xi}(\\xi-1) f^{\\prime}(\\eta).",
+                "output": "解：(I) 将要证等式变形为 \\frac{\\mathrm{e}^{-1}-1}{\\int_{0}^{1} f(t) \\mathrm{d} t}=-\\frac{\\mathrm{e}^{-\\xi}}{f(\\xi)}.\\\\\\\\由极限 \\lim _{x \\rightarrow 0^{-}} \\frac{f(x+1)}{x} 存在, 可知 \\lim _{x \\rightarrow 0^{-}} f(x+1)=0=f(1).\\\\对 \\mathrm{e}^{-x}, \\int_{0}^{x \\rightarrow} f(t) \\mathrm{d} t 在 [0,1] 上应用柯西中值定理, 有\\\\\\\\\\frac{\\mathrm{e}^{-1}-1}{\\int_{0}^{1} f(t) \\mathrm{d} t}=-\\frac{\\mathrm{e}^{-\\xi}}{f(\\xi)}(0<\\xi<1) .\\\\\\\\\\\\( II ) 由 f(1)-f(\\xi)=f^{\\prime}(\\eta)(1-\\xi), \\xi<\\eta<1, 得 f(\\xi)=(\\xi-1) f^{\\prime}(\\eta), 代人 (1) 式,\\\\\\\\\\frac{\\mathrm{e}^{-1}-1}{\\int_{0}^{1} f(t) \\mathrm{d} t}=-\\frac{\\mathrm{e}^{-\\xi}}{(\\xi-1) f^{\\prime}(\\eta)} .\\\\\\\\\\\\整理得\\\\\\\\\\mathrm{e} \\int_{0}^{1} f(t) \\mathrm{d} t=(\\mathrm{e}-1) \\mathrm{e}^{{\\xi}}(\\xi-1) f^{\\prime}(\\eta) ."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x)=\\left\\{\\begin{array}{ll}\\sin x, & 0 \\leqslant x<\\pi, \\\\ 2, & \\pi \\leqslant x \\leqslant 2 \\pi,\\end{array} F(x)=\\int_{0}^{x} f(t) \\mathrm{d} t\\right., 则 ( ).\\\\A. x=\\pi 是 F(x) 的跳跃间断点\\\\B. x=\\pi 是 F(x) 的可去间断点\\\\C. F(x) 在 x=\\pi 处连续但不可导\\\\D. F(x) 在 x=\\pi 处可导\\\\",
+                "output": "解:x=\\pi 是 f(x) 的跳跃间断点, 故 f(x) 可积, 则 F(x)=\\int_{0}^{x} f(t) \\mathrm{d} t 在 x=\\pi 处连续,但不可导, C 正确."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 y=f(x) 由参数方程 \\left\\{\\begin{array}{l}x=t^{2}+1, \\\\ y=4 t-t^{2}\\end{array}(t \\geqslant 0)\\right. 确定, 则 \\lim _{n \\rightarrow \\infty} n\\left[f\\left(\\frac{2 n+1}{n}\\right)-3\\right]=",
+                "output": "解：\\lim _{n \\rightarrow \\infty} n\\left[f\\left(\\frac{2 n+1}{n}\\right)-3\\right]=\\lim _{n \\rightarrow \\infty} \\frac{f\\left(2+\\frac{1}{n}\\right)-3}{\\frac{1}{n}} .\\\\\\\\\\\\由已知, 当 x=2 时, t=1, y=3, 故\\\\\\\\\\text { 原极限 }=\\lim _{n \\rightarrow \\infty} \\frac{f\\left(2+\\frac{1}{n}\\right)-f(2)}{\\frac{1}{n}}=f^{\\prime}(2) \\text {. }\\\\\\\\\\\\而 \\left.\\frac{\\mathrm{d} y}{\\mathrm{~d} x}\\right|_{x=2}=\\left.\\frac{4-2 t}{2 t}\\right|_{t=1}=1, 故原式 =f^{\\prime}(2)=1."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x) 在 (-\\infty,+\\infty) 内可导,则下列命题正确的是 ().\\\\A. 若 \\lim _{x \\rightarrow-\\infty} f(x)=-\\infty, 则必有 \\lim _{x \\rightarrow-\\infty} f^{\\prime}(x)=-\\infty\\\\B. 若 \\lim _{x \\rightarrow-\\infty} f^{\\prime}(x)=-\\infty, 则必有 \\lim _{x \\rightarrow-\\infty} f(x)=-\\infty\\\\C. 若 \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty, 则必有 \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=+\\infty\\\\D. 若 \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=+\\infty, 则必有 \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty",
+                "output": "解：涉及 f(x) 与 f^{\\prime}(x) 的极限, 考虑用拉格朗日中值定理.\\\\由 \\lim f^{\\prime}(x)=+\\infty, 知存在充分大的 x_{0} 和 M, 当 x>x_{0} 时, 有 f^{\\prime}(x)>M>1, 故当 x \\rightarrow+\\infty 时,\\\\\\\\f(x)=f\\left(x_{0}\\right)+f^{\\prime}(\\xi)\\left(x-x_{0}\\right)>f\\left(x_{0}\\right)+\\left(x-x_{0}\\right) \\rightarrow+\\infty\\left(\\xi \\text { 介于 } x_{0} \\text { 与 } x \\text { 之间 }\\right),\\\\\\\\\\\\故 D 正确."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "求平行于平面 x+y+z=9 且与球面x^2+y^2+z^2=4相切的平面方程.",
+                "output": "解：\\lim_{x\\to0}\\frac{\\mid\\boldsymbol{\\alpha}+x\\boldsymbol{\\beta}\\mid-\\mid\\boldsymbol{\\alpha}\\mid}x=\\lim_{x\\to0}\\frac{(\\boldsymbol{\\alpha}+x\\boldsymbol{\\beta})\\cdot(\\boldsymbol{\\alpha}+x\\boldsymbol{\\beta})-\\boldsymbol{\\alpha}\\cdot\\boldsymbol{\\alpha}}{x(\\mid\\boldsymbol{\\alpha}+x\\boldsymbol{\\beta}\\mid+\\mid\\boldsymbol{\\alpha}\\mid)}=\\lim_{x\\to0}\\frac{2x\\boldsymbol{\\alpha}\\cdot\\boldsymbol{\\beta}+x^2\\boldsymbol{\\beta}\\cdot\\boldsymbol{\\beta}}{2\\mid\\boldsymbol{\\alpha}\\mid x}=\\frac{\\boldsymbol{\\alpha}\\cdot\\boldsymbol{\\beta}}{\\mid\\boldsymbol{\\alpha}\\mid}+0=\\mid\\beta\\mid\\cos(\\alpha,\\beta)=2\\times\\frac12=1."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设当 x \\rightarrow 0 时, (x-\\sin x) \\tan x 是比 \\ln \\left(1+x^{n}\\right) 高阶的无穷小, 而 \\ln \\left(1+x^{n}\\right) 是比 x^{2} 高阶的无穷小, 则 n=(\\quad).\\A. 4\\B. 3\\C. 2\\D. 1",
+                "output": "B \\\\ 解: 当 x \\rightarrow 0 时, \\ln \\left(1+x^{n}\\right) \\sim x^{n}, 由 \\sin x=x-\\frac{x^{3}}{3 !}+o\\left(x^{3}\\right), 知\\\\(x-\\sin x) \\tan x \\sim \\frac{x^{4}}{6} .\\\\\\由已知, 4>n 且 n>2, 故 n=3"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 y=y(x) 由参数方程 \\left\\{\\begin{array}{l}x=t-\\sin t \\\\ y=1-\\cos t\\end{array}\\right. 确定, 求 \\frac{\\mathrm{d} y}{\\mathrm{~d} x}, \\frac{\\mathrm{d}^{2} y}{\\mathrm{~d} x^{2}}.",
+                "output": "解：\\frac{\\mathrm{d} y}{\\mathrm{~d} x}=\\frac{\\mathrm{d} y}{\\mathrm{~d} t} \\cdot \\frac{\\mathrm{d} t}{\\mathrm{~d} x}=\\frac{\\sin t}{1-\\cos t}, \\\\ \\frac{\\mathrm{d}^{2} y}{\\mathrm{~d} x^{2}}=\\frac{\\mathrm{d}}{\\mathrm{d} x}\\left(\\frac{\\sin t}{1-\\cos t}\\right)=\\frac{\\mathrm{d}}{\\mathrm{d} t}\\left(\\frac{\\sin t}{1-\\cos t}\\right) \\cdot \\frac{\\mathrm{d} t}{\\mathrm{~d} x}=-\\frac{1}{(1-\\cos t)^{2}} ."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "求直线L:\\frac{x+2}3=\\frac{2-y}1=\\frac{z+1}2在平面\\pi:2x+3y+3z-8=0上的投影直线方程.",
+                "output": "解：用平面束方程求出经过直线L且与平面\\pi垂直的平面,该平面与平面\\pi的方程联立,便可得投影直线方程.将直线L变形为一般形式:\\left.\\left\\{\\begin{matrix}x+3y-4=0,\\\\2x-3z+1=0,\\end{matrix}\\right.\\right.故过L的平面束方程为x+3y-4+\\lambda(2x-3z+1)=0,即\\left(1+2\\lambda\\right)x+3y-3\\lambda z+\\lambda-4=0,此平面与平面\\pi垂直,故(1+2\\lambda,3,-3\\lambda)\\bullet(2,3,3)=11-5\\lambda=0,解得\\lambda=\\frac{11}5,于是与平面\\pi;2x+3y+3z-8=0垂直的平面方程为\\left(1+\\frac{22}{5}\\right)x+3y-\\frac{33}{5}z+\\frac{11}{5}-4=0,即9x+5y-11z-3=0,故所求投影直线方程为\\left.\\left\\{\\begin{matrix}{9x+5y-11z-3=0},\\\\{2x+3y+3z-8=0.}\\end{matrix}\\right.\\right."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x) 在 (0,+\\infty) 内满足 f(x y)=f(x)+f(y), 且 f^{\\prime}(1)=1, 证明: f(x) 在 (0,+\\infty) 内可导,并求 f(x).",
+                "output": "解：令 x=y=1, 由 f(x y)=f(x)+f(y), 知 f(1)=0.\\\\\\\\\\begin{aligned}\\\\f^{\\prime}(x) & =\\lim _{\\Delta x \\rightarrow 0} \\frac{f(x+\\Delta x)-f(x)}{\\Delta x}=\\lim _{\\Delta x \\rightarrow 0} \\frac{f\\left[x\\left(1+\\frac{\\Delta x}{x}\\right)\\right]-f(x)}{\\Delta x} \\\\\\\\& =\\lim _{\\Delta x \\rightarrow 0} \\frac{f(x)+f\\left(1+\\frac{\\Delta x}{x}\\right)-f(x)}{\\Delta x}=\\lim _{\\Delta x \\rightarrow 0} \\frac{f\\left(1+\\frac{\\Delta x}{x}\\right)-f(1)}{\\frac{\\Delta x}{x}} \\cdot \\frac{1}{x}=\\frac{f^{\\prime}(1)}{x}=\\frac{1}{x},\\\\\\end{aligned}\\\\\\\\\\\\故 f(x) 在 (0,+\\infty) 内可导.\\\\由 f^{\\prime}(x)=\\frac{1}{x}, 积分得 f(x)=\\ln x+C. 又 f(1)=0, 得 C=0, 所以 f(x)=\\ln x."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 a, b 为正数, 证明: 至少存在一点 \\xi \\in(a, b), 使得 \\frac{a \\mathrm{e}^{b}-b \\mathrm{e}^{a}}{a-b}=\\mathrm{e}^{\\xi}(1-\\xi).",
+                "output": "解：\\frac{a \\mathrm{e}^{b}-b \\mathrm{e}^{a}}{a-b}=\\mathrm{e}^{\\xi}(1-\\xi) 等式左边分子、分母同时除以 a b, 有\\\\\\\\\\frac{\\frac{\\mathrm{e}^{b}}{b}-\\frac{\\mathrm{e}^{a}}{a}}{\\frac{1}{b}-\\frac{1}{a}}=\\mathrm{e}^{\\xi}(1-\\xi) .\\\\\\\\\\\\对 F(x)=\\frac{\\mathrm{e}^{x}}{x}, G(x)=\\frac{1}{x} 在 [a, b] 上应用柯西中值定理, 有\\\\\\\\\\frac{\\frac{\\mathrm{e}^{b}}{b}-\\frac{\\mathrm{e}^{a}}{a}}{\\frac{1}{b}-\\frac{1}{a}}=\\frac{\\frac{\\xi \\mathrm{e}^{\\xi}-\\mathrm{e}^{\\xi}}{\\xi^{2}}}{-\\frac{1}{\\xi^{2}}}=\\mathrm{e}^{\\xi}(1-\\xi), a<\\xi<b,\\\\\\\\\\\\故原等式成立."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x) 在 (0,+\\infty) 内一阶可导, g(x) 为 f(x) 的反函数, 且 g(x) 连续, 若\\\\\\\\\\int_{1}^{f(x)} g(t) \\mathrm{d} t=x^{2} \\mathrm{e}^{x}-4 \\mathrm{e}^{2}-\\int_{1}^{x-1} f(t+1) \\mathrm{d} t, f(2)=1,\\\\\\\\\\\\求 f(x) 的表达式.\\\\",
+                "output": "解 在已知等式两端同时对 x 求导, 得\\\\\\\\g[f(x)] f^{\\prime}(x)=2 x \\mathrm{e}^{x}+x^{2} \\mathrm{e}^{x}-f(x),\\\\\\\\\\\\故 x f^{\\prime}(x)=2 x \\mathrm{e}^{x}+x^{2} \\mathrm{e}^{x}-f(x), 即 f^{\\prime}(x)+\\frac{1}{x} f(x)=(2+x) \\mathrm{e}^{x}. 解一阶线性微分方程, 得\\\\\\\\f(x)=\\mathrm{e}^{-\\int \\frac{1}{x} \\mathrm{~d} x}\\left[\\int(2+x) \\mathrm{e}^{x} \\cdot \\mathrm{e}^{\\int \\frac{1}{x} \\mathrm{~d} x} \\mathrm{~d} x+C\\right]=\\frac{1}{x}\\left(x^{2} \\mathrm{e}^{r}+C\\right) .\\\\\\\\\\\\又由 f(2)=1, 知 \\frac{1}{2}\\left(4 \\mathrm{e}^{2}+C\\right)=1, 解得 C=2-4 \\mathrm{e}^{2}, 故 f(x)=x \\mathrm{e}^{r}+\\frac{2-4 \\mathrm{e}^{2}}{x}(x>0).\\\\"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 y=f(x) 由方程 x=\\int_{1}^{y-x} \\sin ^{2}\\left(\\frac{\\pi t}{4}\\right) \\mathrm{d} t 确定, 则 \\lim _{n \\rightarrow \\infty} n\\left[f\\left(\\frac{1}{n}\\right)-1\\right]=",
+                "output": "解：x=\\int_{1}^{y-x} \\sin ^{2}\\left(\\frac{\\pi t}{4}\\right) \\mathrm{d} t 两边同时对 x 求导, 得\\\\\\\\1=\\left(y^{\\prime}-1\\right) \\cdot \\sin ^{2}\\left[\\frac{\\pi}{4}(y-x)\\right],\\\\\\\\\\\\解得 y^{\\prime}=\\csc ^{2}\\left[\\frac{\\pi}{4}(y-x)\\right]+1 .\\\\\\\\\\\\又由已知, 当 x=0 时, y=1, 即 f(0)=1, 故 \\left.y^{\\prime}\\right|_{x=0}=3,于是\\\\\\\\\\lim _{n \\rightarrow \\infty} n\\left[f\\left(\\frac{1}{n}\\right)-1\\right]=\\lim _{n \\rightarrow \\infty} \\frac{f\\left(\\frac{1}{n}\\right)-f(0)}{\\frac{1}{n}}=f^{\\prime}(0)=3"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "双纽线 \\left(x^{2}+y^{2}\\right)^{2}=x^{2}-y^{2} 围成的平面图形的面积为\\\\",
+                "output": "1 .解 双纽线的极坐标方程为\\\\\\\\r^{2}=\\cos 2 \\theta\\left(-\\frac{\\pi}{4} \\leqslant \\theta \\leqslant \\frac{\\pi}{4}, \\frac{3 \\pi}{4} \\leqslant \\theta \\leqslant \\frac{5 \\pi}{4}\\right) .\\\\由对称性, 知面积 A 为\\\\\\\\A=4 \\cdot \\frac{1}{2} \\int_{0}^{\\frac{\\pi}{4}} r^{2} \\mathrm{~d} \\theta=2 \\int_{0}^{\\frac{\\pi}{4}} \\cos 2 \\theta \\mathrm{d} \\theta=1"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x)=\\left\\{\\begin{array}{ll}(x+1) \\arctan \\frac{1}{x^{2}-1}, & x \\neq \\pm 1, \\\\ 0, & x= \\pm 1,\\end{array}\\right. 则 f(x)(\\quad).\\\\A. 在 x=1, x=-1 处都连续\\\\B. 在 x=1, x=-1 处都间断\\\\C. 在 x=-1 处间断, x=1 处连续\\\\D. 在 x=-1 处连续, x=1 处间断",
+                "output": "D \\\\ 解 当 x \\rightarrow-1 时, \\arctan \\frac{1}{x^{2}-1} 有界, x+1 \\rightarrow 0, 故\\lim_{x \\rightarrow-1} f(x)=0=f(-1),即 f(x) 在 x=-1 处连续. 又因为\\lim_{x \\rightarrow 1^{-}} f(x)=-\\pi, \\lim_{x \\rightarrow 1^{+}} f(x)=\\pi,所以 f(x) 在 x=1 处间断."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "求积分 I_{n}=\\int_{0}^{1} x \\ln ^{n} x \\mathrm{~d} x (n \\geqslant 0 且为整数) 的递推关系, 并计算 I_{n}.\\\\",
+                "output": "解 I_{n}=\\frac{1}{2} \\int_{0}^{1} \\ln ^{n} x \\mathrm{~d}\\left(x^{2}\\right)=\\left.\\frac{1}{2} x^{2} \\ln ^{n} x\\right|_{0} ^{1}-\\frac{1}{2} \\int_{0}^{1} n \\ln ^{n-1} x \\cdot \\frac{1}{x} \\cdot x^{2} \\mathrm{~d} x\\\\\\\\=\\frac{n}{2} \\int_{0}^{1} x \\ln ^{n-1} x \\mathrm{~d} x=-\\frac{n}{2} I_{n-1} (这里利用了 \\lim _{x \\rightarrow 0^{+}} x^{2} \\ln ^{n} x=0 ).\\\\由递推公式, 有 I_{n}=\\frac{n}{2}\\left(\\frac{n-1}{2}\\right) I_{n=2}=\\left(-\\frac{n}{2}\\right)\\left(-\\frac{n-1}{2}\\right)\\left(-\\frac{n-2}{2}\\right) I_{n-3}\\\\\\\\=\\cdots=\\left(-\\frac{n}{2}\\right)\\left(-\\frac{n-1}{2}\\right)\\left(-\\frac{n-2}{2}\\right) \\cdots\\left(-\\frac{1}{2}\\right) I_{0},\\\\\\\\\\\\而 I_{0}=\\int_{0}^{1} x \\mathrm{~d} x=\\frac{1}{2}, 故 I_{n}=\\frac{(-1)^{n}}{2^{n}} n ! \\cdot \\frac{1}{2}=\\frac{(-1)^{n} n !}{2^{n+1}}.\\\\"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f^{\\prime}(x)=\\arctan (x-1)^{2}, f(0)=0, 求 I=\\int_{0}^{1} f(x) \\mathrm{d} x.\\\\",
+                "output": "解\\\\\\\\\\begin{aligned}\\\\I & =\\int_{0}^{1} f(x) \\mathrm{d} x=\\left.x f(x)\\right|_{0} ^{1}-\\int_{0}^{1} x f^{\\prime}(x) \\mathrm{d} x \\\\\\\\& =f(1)-\\int_{0}^{1} x \\arctan (x-1)^{2} \\mathrm{~d} x \\\\\\\\& =f(1)-\\int_{0}^{1}(x-1+1) \\arctan (x-1)^{2} \\mathrm{~d}(x-1) \\\\\\\\& =f(1)-\\int_{0}^{1}(x-1) \\arctan (x-1)^{2} \\mathrm{~d}(x-1)-\\int_{0}^{1} \\arctan (x-1)^{2} \\mathrm{~d} x \\\\\\\\& =f(1)-\\int_{0}^{1}(x-1) \\arctan (x-1)^{2} \\mathrm{~d}(x-1)-\\int_{0}^{1} f^{\\prime}(x) \\mathrm{d} x \\\\\\\\& =f(1)-\\frac{1}{2} \\int_{0}^{1} \\arctan (x-1)^{2} \\mathrm{~d}\\left[(x-1)^{2}\\right]-[f(1)-f(0)] \\\\\\\\& =-\\left.\\frac{1}{2}(x-1)^{2} \\arctan (x-1)^{2}\\right|_{0} ^{1}+\\frac{1}{2} \\int_{0}^{1} \\frac{(x-1)^{2} \\cdot 2(x-1)}{1+(x-1)^{4}} \\mathrm{~d} x \\\\\\\\& =\\frac{\\pi}{8}+\\frac{1}{4} \\int_{0}^{1} \\frac{1}{1+(x-1)^{4}} \\mathrm{~d}\\left[(x-1)^{1}\\right] \\\\\\\\& =\\frac{\\pi}{8}+\\left.\\frac{1}{4} \\ln \\left[1+(x-1)^{4}\\right]\\right|_{0} ^{1}=\\frac{\\pi}{8}-\\frac{1}{4} \\ln 2 .\\\\\\end{aligned}"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "下列函数中, 在 x=0 处不可导的是 (\\quad).\\\\A. f(x)=|x| \\sin |x|\\\\B. f(x)=|x| \\sin \\sqrt{|x|}\\\\C. f(x)=\\cos |x|\\\\D. f(x)=\\cos \\sqrt{|x|}",
+                "output": "解：\\begin{aligned}\\\\f_{+}^{\\prime}(0) & =\\lim _{x \\rightarrow 0^{+}} \\frac{\\cos \\sqrt{|x|}-1}{x}=\\lim _{x \\rightarrow 0^{+}} \\frac{-\\frac{1}{2}|x|}{x}=-\\frac{1}{2}, \\\\\\\\f_{-}^{\\prime}(0) & =\\lim _{x \\rightarrow 0^{-}} \\frac{\\cos \\sqrt{|x|}-1}{x}=\\lim _{x \\rightarrow 0^{-}} \\frac{-\\frac{1}{2}|x|}{x}=\\frac{1}{2},\\\\\\end{aligned}\\\\\\\\\\\\故 f(x)=\\cos \\sqrt{|x|} 在 x=0 处不可导.选D"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 $D$ 为由 $y = x^2 - 4$ 和 $y = 0$ 所围区域，求积分 $I = \\iint_D (kx + y) \\, \\mathrm{d}x \\, \\mathrm{d}y$ 的正负性。\n$A.\\: I = 0$\n$B.\\: I > 0$\n$C.\\: I < 0$\n$D.\\: I$ 的正负与 $k$ 有关",
+                "output": "解：$D$ 关于y 轴对称，$kx$ 关于$x$ 为奇函数，故$\\iint_D kx$d$x$d$y= 0.$ 又在$D$ 内，$y<0$,故$I<0.$"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "点P(1,-1,0)到直线 L:\\frac x3=\\frac y3=\\frac{z+1}2的距离d=\\_\\_.",
+                "output": "解：直线L过点P_0\\left(0,0,-1\\right),其方向向量s=(3,3,2).又\\vec{P_{0}P}=\\left(1,-1,1\\right),\\overrightarrow{P_0P}\\times s=\\begin{vmatrix}i&j&k\\\\1&-1&1\\\\3&3&2\\end{vmatrix}=-5\\boldsymbol{i}+\\boldsymbol{j}+6\\boldsymbol{k},故所求距离d=\\frac{\\mid\\overrightarrow{P_0P}\\times s\\mid}{\\mid s\\mid}=\\frac{\\sqrt{341}}{11}.故填写\\frac{\\sqrt{341}}{11}."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x)=3 x^{2}+k x^{-3}, 若对任 意 x \\in(0,+\\infty), 都有 f(x) \\geqslant 20, 则 k 至少为",
+                "output": "解：由 f(x)=3 x^{2}+k x^{-3}, 有 f^{\\prime}(x)=6 x-3 k x^{-4}=0, 得唯一驻点 x=\\sqrt[5]{\\frac{k}{2}}. 又 f^{\\prime \\prime}(x)=6+12 k x^{-5}, f^{\\prime \\prime}\\left(\\sqrt[5]{\\frac{k}{2}}\\right)>0,\\\\\\\\故 f\\left(\\sqrt[5]{\\frac{k}{2}}\\right)=5\\left(\\frac{k}{2}\\right)^{\\frac{2}{5}} 为 f(x) 在 (0,+\\infty) 内的最小值.\\\\由 5\\left(\\frac{k}{2}\\right)^{\\frac{2}{5}} \\geqslant 20, 解得 k \\geqslant 64, 即 k 至少为 64 ."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设函数 f(x) 有连续导数, 且 \\lim _{x \\rightarrow 0}\\left[\\frac{\\sin x}{x^{2}}+\\frac{f(x)}{x}\\right]=2, 则 f(x) 的一阶麦克劳林展开式为",
+                "output": "解：由\\lim _{x \\rightarrow 0} \\left[\\frac{\\sin x}{x^{2}}+\\frac{f(x)}{x}\\right]=\\lim _{x \\rightarrow 0} \\frac{\\sin x+x f(x)}{x^{2}}=2,\\\\\\\\\\\\知 \\sin x+x f(x) 与 2 x^{2} 是等价无穷小.\\\\又由 sin x+x f(x) =\\left[x+o\\left(x^{2}\\right)\\right]+x\\left[f(0)+f^{\\prime}(0) x+o(x)\\right] \\\\ =[1+f(0)] x+f^{\\prime}(0) x^{2}+o\\left(x^{2}\\right),\\\\故 f(0)=-1, f^{\\prime}(0)=2, 所以\\\\\\\\f(x)=f(0)+f^{\\prime}(0) x+o(x)=-1+2 x+o(x)."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "求过点(-1,2,3),垂直于直线\\frac x4=\\frac y5=\\frac z6且平行于平面 7x+8y+9z+10=0的直线方程.",
+                "output": "解：依题设，解题关键是求所求直线的方向向量s=(m,n,p).由已知,\\left.\\left\\{\\begin{matrix}{(m,n,p)\\bullet(4,5,6)=0,}\\\\{(m,n,p)\\bullet(7,8,9)=0,}\\\\\\end{matrix}\\right.\\right.即\\left.\\left\\{\\begin{matrix}4m+5n+6p=0,\\\\7m+8n+9p=0.\\end{matrix}\\right.\\right.任取其一组非零解均可作为方向向量,不妨取s=(1,-2,1),故所求直线方程为\\frac{x+1}1=\\frac{y-2}{-2}=\\frac{z-3}1."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "求心形线 r=1-\\cos \\theta 在对应于 \\theta=\\frac{\\pi}{2} 处的切线方程.",
+                "output": "解：为求 \\frac{\\mathrm{d} y}{\\mathrm{~d} x}, 将极坐标化为参数方程.\\left\\{\\begin{array}{l}\\\\x=r(\\theta) \\cos \\theta=(1-\\cos \\theta) \\cos \\theta, \\\\\\\\y=r(\\theta) \\sin \\theta=(1-\\cos \\theta) \\sin \\theta,\\\\\\end{array}\\right.\\\\\\\\\\theta 为参数, 则 \\left.\\frac{\\mathrm{d} y}{\\mathrm{~d} x}\\right|_{0=\\frac{\\pi}{2}}=\\frac{y^{\\prime}(\\theta)}{x^{\\prime}(\\theta)}=\\left.\\frac{\\cos \\theta(1-\\cos \\theta)+\\sin ^{2} \\theta}{-\\sin \\theta(1-\\cos \\theta)+\\cos \\theta \\sin \\theta}\\right|_{\\theta=\\frac{\\pi}{2}}=-1,故切线方程为 y-1=(-1)(x-0), 即 x+y=1."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设\\alpha与\\beta均为单位向最,其夹角为\\frac\\pi6,则以\\alpha+2\\beta与 3\\alpha+\\beta为邻边的平行四边形的面积为\\_\\_.",
+                "output": "解：所求平行四边形的面积为A=\\mid(\\alpha+2\\beta)\\times(3\\alpha+\\beta)\\mid=\\mid\\alpha\\times\\beta+6\\beta\\times\\alpha\\mid =\\mid\\alpha\\times\\beta-6\\alpha\\times\\beta\\mid=\\mid-5\\alpha\\times\\beta\\mid =5\\mid\\alpha\\times\\beta\\mid=5\\mid\\alpha\\mid\\mid\\beta\\mid\\sin{(\\alpha,\\beta)}=\\frac52."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x) 在 [a, b] 上连续,在 (a, b) 内可导, 0<a<b, 证明: 存在 \\xi, \\eta \\in(a, b), 使得 2 \\eta f^{\\prime}(\\xi)=(b+a) f^{\\prime}(\\eta).",
+                "output": "解：只需证 f^{\\prime}(\\xi)=\\frac{(b+a) f^{\\prime}(\\eta)}{2 \\eta}.\\\\\\\\对 f(x) 及 x^{2} 在 [a, b] 上应用柯西中值定理, 得\\\\\\\\\\\\\\frac{f(b)-f(a)}{b^{2}-a^{2}}=\\frac{f^{\\prime}(\\eta)}{2 \\eta} a<\\eta<b, \\\\\\\\即\\frac{f(b)-f(a)}{b-a}=\\frac{(b+a) f^{\\prime}(\\eta)}{2 \\eta} .\\\\再由拉格朗日中值定理, 存在一点 \\xi \\in(a, b), 使得 f^{\\prime}(\\xi)=\\frac{f(b)-f(a)}{b-a},故原等式成立."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 k>0, 方程 \\ln x-\\frac{x}{\\mathrm{e}}+k=0 在 (0,+\\infty) 内不同实根的个数为 ( ).\\\\A. 0\\\\B. 1\\\\C. 2\\\\D. 3",
+                "output": "解：令 f(x)=\\ln x-\\frac{x}{\\mathrm{e}}+k, 则 f^{\\prime}(x)=\\frac{1}{x}-\\frac{1}{\\mathrm{e}}=\\frac{\\mathrm{e}-x}{\\mathrm{e} x}.\\\\令 f^{\\prime}(x)=0, 得 x=\\mathrm{e}, 可知 x=\\mathrm{e} 是 f(x) 的最大值点, 最大值为 f(\\mathrm{e})=k.\\\\由 k>0, 知当 x \\in(0, \\mathrm{e}) 时, f(x) 单调增加; 当 x \\in(\\mathrm{e},+\\infty) 时, f(x) 单调减少, 故函数 f(x) 的图形与 x 轴有两个不同交点, 即方程有两个不同实根, \\mathrm{C} 正确."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 \\int_{0}^{+\\infty} f(x) \\mathrm{d} x 收敛, 且 f(x)=\\frac{1}{1+x^{2}}-\\frac{\\mathrm{e}^{-x}}{1+\\mathrm{e}^{x}} \\int_{0}^{+\\infty} f(x) \\mathrm{d} x, 求 \\int^{+\\infty} f(x) \\mathrm{d} x.",
+                "output": "解 由于 \\int_{0} f(x) \\mathrm{d} x 收玫, 记 \\int_{0} f(x) \\mathrm{d} x=A ( A 为常数).\\\\\\\\对已知等式两端分别积分, 得\\\\\\\\A=\\int_{0}^{+\\infty} f(x) \\mathrm{d} x=\\int_{0}^{+\\infty} \\frac{1}{1+x^{2}} \\mathrm{~d} x-A \\int_{0}^{+\\infty} \\frac{\\mathrm{e}^{-x}}{1+\\mathrm{e}^{x}} \\mathrm{~d} x,\\\\\\\\\\\\其中 \\int_{0}^{+\\infty} \\frac{\\mathrm{d} x}{1+x^{2}}=\\left.\\arctan x\\right|_{0} ^{+\\infty}=\\frac{\\pi}{2}. 又\\\\\\\\\\begin{aligned}\\\\& \\int_{0}^{+\\infty} \\frac{\\mathrm{e}^{-x}}{1+\\mathrm{e}^{x}} \\mathrm{~d} x=\\int_{0}^{+\\infty} \\frac{\\mathrm{d} x}{\\mathrm{e}^{x}\\left(1+\\mathrm{e}^{x}\\right)}=\\int_{0}^{+\\infty}\\left(\\frac{1}{\\mathrm{e}^{x}}-\\frac{1}{\\mathrm{e}^{x}+1}\\right) \\mathrm{d} x \\\\\\\\= & -\\left.\\mathrm{e}^{-x}\\right|_{0} ^{+\\infty}-\\int_{0}^{+\\infty} \\frac{\\mathrm{e}^{-x}}{1+\\mathrm{e}^{-x}} \\mathrm{~d} x=1+\\left.\\ln \\left(1+\\mathrm{e}^{-x}\\right)\\right|_{0} ^{+\\infty}=1-\\ln 2,\\\\\\end{aligned}\\\\\\\\\\\\故 A=\\frac{\\pi}{2}-(1-\\ln 2) A, 解得 A=\\int_{0}^{+\\infty} f(x) \\mathrm{d} x=\\frac{\\pi}{2(2-\\ln 2)}.\\\\"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 \\int_{0}^{+\\infty} \\frac{\\sin x}{x} \\mathrm{~d} x=\\frac{\\pi}{2}, 则 I=\\int_{0}^{+\\infty} \\frac{\\sin ^{2} x}{x^{2}} \\mathrm{~d} x=\\\\",
+                "output": "\\frac{\\pi}{2}.\\\\\\\\解\\\\\\\\\\begin{aligned}\\\\I & =\\int_{0}^{+\\infty} \\frac{\\sin ^{2} x}{x^{2}} \\mathrm{~d} x=-\\int_{0}^{+\\infty} \\sin ^{2} x \\mathrm{~d}\\left(\\frac{1}{x}\\right) \\\\\\\\& =-\\left.\\frac{\\sin ^{2} x}{x}\\right|_{0} ^{+\\infty}+\\int_{0}^{+\\infty} \\frac{2 \\sin x \\cos x}{x} \\mathrm{~d} x \\\\\\\\& =\\int_{0}^{+\\infty} \\frac{\\sin 2 x}{x} \\mathrm{~d} x \\xlongequal{2 x=t} \\int_{0}^{+\\infty} \\frac{\\sin t}{t} \\mathrm{~d} t=\\frac{\\pi}{2} .\\\\\\end{aligned}"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": " 设 \\lim _{x \\rightarrow \\infty}\\left(\\sqrt[3]{1-x^{6}}-a x^{2}-b\\right)=0, 则 a=___ , b=___\\\\",
+                "output": "-1,0 \\\\ 解 \\\\\\\\\\lim _{x \\rightarrow \\infty}\\left(\\sqrt[3]{1-x^{6}}-a x^{2}-b\\right)=\\lim _{x \\rightarrow \\infty} \\frac{\\sqrt[3]{x^{-6}-1}-a-b x^{-2}}{\\frac{1}{x^{2}}} .\\\\\\\\\\\\而 \\lim _{x \\rightarrow \\infty} \\frac{1}{x^{2}}=0, 由已知, 有 \\lim _{x \\rightarrow \\infty}\\left(\\sqrt[3]{x^{-6}-1}-a-b x^{-2}\\right)=0, 易知 a=-1, 代回原式, 得 \\lim _{x \\rightarrow \\infty}\\left(\\sqrt[3]{1-x^{6}}+x^{2}-b\\right)=0, 所以\\\\\\\\b=\\lim _{x \\rightarrow \\infty}\\left(\\sqrt[3]{1-x^{6}}+x^{2}\\right)=\\lim _{x \\rightarrow \\infty} \\frac{1}{\\sqrt[3]{\\left(1-x^{6}\\right)^{2}}-x^{2} \\sqrt[3]{1-x^{6}}+x^{4}}=0,\\\\\\\\\\\\故 a=-1, b=0."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "讨论曲线 y=4 \\ln x+k 与 y=4 x+\\ln ^{4} x 交点的个数.",
+                "output": "解：问题等价于讨论 \\ln ^{4} x-4 \\ln x+4 x-k=0 不同实根的个数.\\\\\\\\令 f(x)=\\ln ^{4} x-4 \\ln x+4 x-k, 定义域为 (0,+\\infty), 则 f^{\\prime}(x)=\\frac{4\\left(\\ln ^{3} x-1+x\\right)}{x}=0,得唯一驻点 x=1.\\\\\\\\当 0<x<1 时, f^{\\prime}(x)<0, f(x) 单调减少; 当 x>1 时, f^{\\prime}(x)>0, f(x) 单调增加, 故 f(1)=4-k 为 f(x) 的最小值. 且 \\lim _{x \\rightarrow 0^{+}} f(x)=+\\infty, \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty.\\\\(I) 当 4-k>0 时, f(x)=0 没有实根, 无交点;\\\\(II) 当 4-k=0 时, f(x)=0 有唯一实根, 交点个数为 1 ;\\\\(III) 当 4-k<0 时, f(x)=0 仅有两个不同实根, 交点个数为 2 ."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "对数曲线 y=\\ln x 上哪一点的曲率半径最小? 求出该点的曲率半径.",
+                "output": "解：由 y=\\ln x, y^{\\prime}=\\frac{1}{x}, y^{\\prime \\prime}=-\\frac{1}{x^{2}}, 故曲率半径为\\\\\\\\\\begin{array}{l}\\\\R=\\frac{1}{K}=\\frac{\\left(1+y^{\\prime 2}\\right)^{\\frac{3}{2}}}{\\left|y^{\\prime \\prime}\\right|}=\\frac{\\left(1+x^{2}\\right)^{\\frac{3}{2}}}{x} . \\\\\\\\令R^{\\prime}=\\frac{\\left(1+x^{2}\\right)^{\\frac{1}{2}}}{x^{2}} \\cdot\\left(2 x^{2}-1\\right)=0,\\\\\\end{array}\\\\得 x=\\frac{\\sqrt{2}}{2},\\\\\\\\R^{\\prime \\prime}=\\frac{2 x^{4}+x^{2}+2}{x^{3} \\sqrt{1+x^{2}}}>0,\\\\\\\\\\\\故当 x=\\frac{\\sqrt{2}}{2} 时, 曲率半径最小, 故 y=\\ln x 在点 \\left(\\frac{\\sqrt{2}}{2},-\\frac{1}{2} \\ln 2\\right) 处的曲率半径最小, 最小曲率半径为 \\frac{3 \\sqrt{3}}{2}."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 y^{\\prime}+P(x) y=0 的一个特解为 y=\\cos 2 x, 则该方程满足 y(0)=2 的特解为 (\\quad).\\\\A. 2 \\cos x\\\\B. 2 \\cos 2 x\\\\C. \\cos 2 x\\\\D. \\cos 2 x+1",
+                "output": "B. 解：将y=\\cos2x带入y^{\\prime}+P(x)y=0,解得P(x)=2\\tan2x，故y^{\\prime}+(2\\tan2x)y=0,解此一阶线性齐次微分方程，得y=Ce^{-\\int P(x)\\mathrm{d}x}=Ce^{-\\int2\\tan2x\\mathrm{d}x}=C\\cos 2x.由y(0)=2，解得C=2，故y=2\\cos 2x，B正确"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "$I_{1}=\\iint_{D}\\sqrt{\\cos(x^{2}+y^{2}})\\mathrm{d}x \\mathrm{d}y,\nI_{2}=\\iint_{D}\\cos(x^{2}+y^{2})\\mathrm{d}x \\mathrm{d}y\n,I_{3}=\\iint_{D}\\cos(x^{2}+y^{2})^{2}\\mathrm{d}x \\mathrm{d}y$\n其中 $D:x^{2}+y^{2}\\leq1$ ，则\nA. $I_{1}> I_{2}> I_3$ \nB. $I_{1}< I_{2}\\ <I_{3}$ \nC. $I_{2}>I_{1}> I_{3}$ \nD. $I_{3}> I_{1}> I_{2}$ ",
+                "output": "解：在 $D:0\\leq x^{2}+y^{2}\\leq1$ 上有 ${\\frac{\\pi}{2}}>1\\geq{\\sqrt{x^{2}+y^{2}}}\\geq x^{2}+y^{2}\\geq(x^{2}+y^{2})^{2}\\geq0\\,,$ 且 $\\cos x$在 $\\left[0\\,,\\,{\\frac{\\pi}{2}}\\,\\right)$ 上为单调减少函数,故 $0\\leq\\cos\\sqrt{x^{2}+y^{2}}\\leq\\cos(x^{2}+y^{2})\\leq\\cos(x^{2}+y^{2})^{2}\\,,$ 所以 $I_{1}< I_{2}< I_{3},\\mathrm{B}$ 正确"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "将二重积分 $I=\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{2}}\\mathrm{d}\\theta\\!\\int_{0}^{2\\sin\\theta}\\!f(r\\!\\cos\\,\\theta,r\\!\\sin\\theta)r\\mathrm{d}r$ 化为直角坐标系下的二次积分，则 I=( )\nA. $\\int_{0}^{1}\\!\\mathrm{d}x\\!\\int_{1-\\sqrt{1-x^{2}}}^{x}\\!f(x,y)\\,\\mathrm{d}y$ \nB.$\\int_{0}^{1}d x\\int_{x}^{\\sqrt{1-x^{2}}}f\\left(x, y\\right)d y$\nC.$\\int_{0}^{1}\\mathrm{d}y\\int_{0}^{y}\\!\\!f(x, y)\\,\\mathrm{d}x+\\int_{-1}^{2}\\mathrm{d}y\\int_{0}^{\\sqrt{2y-y^2}}f(x, y)\\,\\mathrm{d}x$\nD. $\\int_{0}^{1}\\mathrm{d}y{\\int_{x}^{\\sqrt{2y-y^{2}}}}f\\left(x, y\\right)\\mathrm{d}x$ ",
+                "output": "解：由 $r = 2sin \\theta$，得 $r^2 = 2rsin \\theta$，即  $x^2+y^2=2y$，所以 C 正确."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "方程 x^2-\\frac{y^2}4+z^2=1表示( ).\\\\A. 旋转双曲面\\\\B. 双叶双曲面\\\\C. 双曲柱面\\\\D.锥面",
+                "output": "解：方程x^2-\\frac{y^2}{4}+z^2=1所表示的曲面，可视为在xOy面上的双曲线 x^2-\\frac{y^2}4=1绕y轴旋转一周所得到的旋转单叶双曲面.A正确."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "求直线\\frac{x-1}0=\\frac y1=\\frac{z-1}2绕z轴旋转一周所得的旋转曲面方程.",
+                "output": "解：已知直线的参数方程为\\begin{cases}x=1,\\\\y=t,\\\\z=2t+1\\end{cases}(t为参数),其上任一点M_0(x_0,y_0,x_0)绕z轴旋转至某一点M(x,y,z)时,有\\begin{cases}x_0^2+y_0^2=x^2+y^2=1+t^2,\\\\z=z_0=2t+1,\\end{cases}消去t,得曲面上任一点坐标满足的关系式,即旋转曲面方程为x^2+y^2-\\left(\\frac{z-1}{2}\\right)^2=1,它是一个单叶双曲面."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x) 在 [a, b] 上可导, f(x) 在 x=a 处取得最小值,在 x=b 处取得最大值,则 ( ).\\\\A. f_{+}^{\\prime}(a)<0 且 f_{-}^{\\prime}(b)<0\\\\B. f_{+}^{\\prime}(a)>0 且 f_{-}^{\\prime}(b)<0\\\\C. f_{+}^{\\prime}(a) \\geqslant 0 且. f_{-}^{\\prime}(b) \\geqslant 0\\\\D. f_{+}^{\\prime}(a)<0 且 f_{-}^{\\prime}(b)>0",
+                "output": "解：用反证法, 假设 f_{+}^{\\prime}(a)<0, 则 f_{+}^{\\prime}(a)=\\lim _{x \\rightarrow a^{+}} \\frac{f(x)-f(a)}{x-a}<0, 由极限的保号性, 知 f(x)<f(a), 与 f(x) 在 x=a 处取得最小值矛盾. 同理, 若 f_{-}^{\\prime}(b)<0, 可知 f(x) 在 x=b 处不可能取得最大值, 故 C 正确."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "求极限 \\lim _{n \\rightarrow \\infty}\\left(\\frac{2^{\\frac{1}{n}}}{n+1}+\\frac{2^{\\frac{2}{n}}}{n+\\frac{1}{2}}+\\cdots+\\frac{2^{\\frac{n}{n}}}{n+\\frac{1}{n}}\\right).\\\\",
+                "output": "解 令 x_{n}=\\frac{2^{\\frac{1}{n}}}{n+1}+\\frac{2^{\\frac{2}{n}}}{n+\\frac{1}{2}}+\\cdots+\\frac{2^{\\frac{n}{n}}}{n+\\frac{1}{n}}, 则\\\\\\\\\\frac{n}{n+1}\\left(2^{\\frac{1}{n}}+2^{\\frac{2}{n}}+\\cdots+2^{\\frac{n}{n}}\\right) \\frac{1}{n} \\leqslant x_{n} \\leqslant \\frac{1}{n}\\left(2^{\\frac{1}{n}}+2^{\\frac{2}{n}}+\\cdots+2^{\\frac{n}{n}}\\right) .\\\\\\\\\\\\由定积分的定义, 有 \\lim _{n \\rightarrow \\infty}\\left(2^{\\frac{1}{n}}+2^{\\frac{2}{n}}+\\cdots+2^{\\frac{n}{n}}\\right) \\frac{1}{n}=\\int_{0}^{1} 2^{x} \\mathrm{~d} x=\\left.\\frac{2^{x}}{\\ln 2}\\right|_{0} ^{1}=\\frac{1}{\\ln 2}, 而 \\lim _{n \\rightarrow \\infty} \\frac{n}{n+1}=1,由夹逼准则, 知 \\lim _{n \\rightarrow \\infty} x_{n}=\\frac{1}{\\ln 2}.\\\\"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "曲线 y=(2 x-1) \\mathrm{e}^{\\frac{1}{x}} 的斜渐近线方程为",
+                "output": "解：k =\\lim _{x \\rightarrow \\infty} \\frac{y}{x}=\\lim _{x \\rightarrow \\infty} \\frac{(2 x-1) \\mathrm{e}^{\\frac{1}{x}}}{x}=2, \\\\\\\\b =\\lim _{x \\rightarrow \\infty}(y-k x)=\\lim _{x \\rightarrow \\infty}\\left[(2 x-1) \\mathrm{e}^{\\frac{1}{x}}-2 x\\right] \\\\ =\\lim _{x \\rightarrow \\infty}\\left[\\left(2 x \\mathrm{e}^{\\frac{1}{x}}-2 x\\right)-\\mathrm{e}^{\\frac{1}{x}}\\right] \\\\ =\\lim _{x \\rightarrow \\infty}\\left(2 \\cdot \\frac{\\mathrm{e}^{\\frac{1}{x}}-1}{\\frac{1}{x}}-\\mathrm{e}^{\\frac{1}{x}}\\right)=2-1=1,\\\\故斜渐近线方程为 y=2 x+1."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "当 x \\rightarrow 0 时, \\mathrm{e}^{x}+\\ln (1-x)-1 与 x^{n} 是同阶无穷小, 则 n=",
+                "output": "解：\\mathrm{e}^{x}=1+x+\\frac{1}{2} x^{2}+\\frac{1}{6} x^{3}+o\\left(x^{3}\\right),\\begin{array}{c}\\\\\\ln (1-x)=-x-\\frac{1}{2} x^{2}-\\frac{1}{3} x^{3}+o\\left(x^{3}\\right), \\\\\\\\\\text { 故 } \\mathrm{e}^{x}+\\ln (1-x)-1=1+x+\\frac{1}{2} x^{2}+\\frac{1}{6} x^{3}-x-\\frac{1}{2} x^{2}-\\frac{1}{3} x^{3}-1+o\\left(x^{3}\\right)=-\\frac{1}{6} x^{3}+o\\left(x^{3}\\right),\\\\\\end{array}\\\\\\\\所以 n=3."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 \\lim _{x \\rightarrow 0} \\frac{1}{\\sin x-a x} \\int_{b}^{x} \\frac{t^{2}}{\\sqrt{1+t^{2}}} \\mathrm{~d} t=c, 且 c \\neq 0, 则 ( ).\\\\A. a=1, b=0, c=-2\\\\B. a=1, b=-2, c=-2\\\\C. a=0, b=1, c=-2\\\\D. a=1, b=1, c=1\\\\",
+                "output": "解:当 x \\rightarrow 0 时, \\sin x-a x \\rightarrow 0, 故 \\int_{b}^{x} \\frac{t^{2}}{\\sqrt{1+t^{2}}} \\mathrm{~d} t \\rightarrow 0,于是必有 b=0.\\\\若 a \\neq 1, 则当 x \\rightarrow 0 时, \\sin x-a x 与 x 是同阶无穷小, \\int_{b}^{x} \\frac{t^{2}}{\\sqrt{1+t^{2}}} \\mathrm{~d} t 是关于 x 的高阶无穷小, 故必有 c=0, 与题设矛盾, 所以 a=1. 由洛必达法则, 有\\\\\\\\\\lim _{x \\rightarrow 0} \\frac{\\int_{0}^{x} \\frac{t^{2}}{\\sqrt{1+t^{2}}} \\mathrm{~d} t}{\\sin x-x}=\\lim _{x \\rightarrow 0} \\frac{\\frac{x^{2}}{\\sqrt{1+x^{2}}}}{\\cos x-1}=\\lim _{x \\rightarrow 0} \\frac{\\frac{x^{2}}{\\sqrt{1+x^{2}}}=-2,}{-\\frac{1}{2} x^{2}}=-2,故 A 正确."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f^{\\prime}\\left(x_{0}\\right)=f^{\\prime \\prime}\\left(x_{0}\\right)=0, f^{\\prime \\prime \\prime}\\left(x_{0}\\right)>0, 则下列选项正确的是 (\\quad).\\\\A. x_{0} 是 f(x) 的极值点\\\\B. f\\left(x_{0}\\right) 是 f(x) 的极大值\\\\C. f\\left(x_{0}\\right) 是 f(x) 的极小值\\\\D. \\left(x_{0}, f\\left(x_{0}\\right)\\right) 是 y=f(x) 的拐点",
+                "output": "解：由 f^{\\prime \\prime}\\left(x_{0}\\right)=0 及已知条件, 有\\\\\\\\f^{\\prime \\prime \\prime}\\left(x_{0}\\right)=\\lim _{x \\rightarrow x_{0}} \\frac{f^{\\prime \\prime}(x)-f^{\\prime \\prime}\\left(x_{0}\\right)}{x-x_{0}}=\\lim _{x \\rightarrow x_{0}} \\frac{f^{\\prime \\prime}(x)}{x-x_{0}}>0,\\\\\\\\\\\\由极限的保号性, 可知当 x>x_{0} 时, f^{\\prime \\prime}(x)>0; 当 x<x_{0} 时, f^{\\prime \\prime}(x)<0, 即在 x_{0} 两侧 f^{\\prime \\prime}(x)变号, 故 \\left(x_{0}, f\\left(x_{0}\\right)\\right) 是 y=f(x) 的拐点.选D"
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设 f(x) 在 [0,+\\infty) 上连续, 在 (0,+\\infty) 内可导, 且 0 \\leqslant f(x) \\leqslant \\frac{x}{1+x^{2}}, 证明: 至少存在一点 \\xi \\in(0, \\bar{\\infty}), 使得 f^{\\prime}(\\xi)=\\frac{1-\\xi^{2}}{\\left(1+\\xi^{2}\\right)^{2}}.",
+                "output": "解：令 F(x)=f(x)-\\frac{x}{1+x^{2}}, 则 F(0)=0.\\\\\\\\\\lim _{x \\rightarrow+\\infty} F(x)=\\lim _{x \\rightarrow+\\infty}\\left[f(x)-\\frac{x}{1+x^{2}}\\right]=0\\\\\\\\(由 0 \\leqslant f(x) \\leqslant \\frac{x}{1+x^{2}}, 及夹逼准则, 知 f(0)=0, \\lim _{x \\rightarrow+\\infty} f(x)=0 ).\\\\由上一题结论知, 存在一点 \\xi \\in(0,+\\infty), 使得 F^{\\prime}(\\xi)=0, 即 f^{\\prime}(\\xi)=\\frac{1-\\xi^{2}}{\\left(1+\\xi^{2}\\right)^{2}}."
+            }
+        ]
+    },
+    {
+        "conversation": [
+            {
+                "input": "设连续函数 f(x) 满足 f(x)=f(2 a-x)(a \\neq 0), b 为常数, 则 \\int_{-b}^{b} f(a-x) \\mathrm{d} x= ).\\\\A. 2 \\int_{0}^{b} f(2 a-x) \\mathrm{d} x\\\\B. 2 \\int_{-b}^{b} f(2 a-x) \\mathrm{d} x\\\\C. 2 \\int_{0}^{b} f(a-x) \\mathrm{d} x\\\\D. 0\\\\",
+                "output": "C.\\\\\\\\解 \\quad \\int_{-b}^{b} f(a-x) \\mathrm{d} x=\\int_{-b}^{0} f(a-x) \\mathrm{d} x+\\int_{0}^{b} f(a-x) \\mathrm{d} x.\\\\由 f(x)=f(2 a-x), 得 f(a+x)=f(a-x), 则\\\\\\\\\\int_{-b}^{0} f(a-x) \\mathrm{d} x \\xlongequal{x=-t}-\\int_{b}^{0} f(a+t) \\mathrm{d} t=\\int_{0}^{b} f(a-t) \\mathrm{d} t=\\int_{0}^{b} f(a-x) \\mathrm{d} x,\\\\\\\\\\\\故 \\int_{-b}^{b} f(a-x) \\mathrm{d} x=2 \\int_{0}^{b} f(a-x) \\mathrm{d} x. C 正确.\\\\"
+            }
+        ]
+    }
+]
