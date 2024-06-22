@@ -208,6 +208,9 @@ xtuner train /root/math/config2/internlm2_chat_7b_qlora_oasst1_e3_copy.py
 5. Convert PTH model to HuggingFace model
 
 ```bash
+mkdir hf
+export MKL_SERVICE_FORCE_INTEL=1
+export MKL_THREADING_LAYER=GNU
 xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
                          ./work_dirs/internlm2_chat_7b_qlora_oasst1_e3_copy/epoch_3.pth \
                          ./hf
@@ -216,9 +219,6 @@ xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
 6. Merge HuggingFace model into a large language model
 
 ```bash
-export MKL_SERVICE_FORCE_INTEL=1
-export MKL_THREADING_LAYER='GNU'
-
 # Original model parameter location
 export NAME_OR_PATH_TO_LLM=/root/math/model/Shanghai_AI_Laboratory/internlm2-math-7b
 
