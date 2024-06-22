@@ -9,9 +9,10 @@
 1.准备配置文件
 
 ```SQL
-# 列出所有内置配置, 复制internlm2_chat_7b_qlora_oasst1_e3为internlm_chat_7b_qlora_oasst1_e3_copy.py
-xtuner list-cfg
-xtuner copy-cfg internlm2_chat_7b_qlora_oasst1_e3 .
+# 拉取github上的AMchat代码模型
+git clone https://github.com/AXYZdong/AMchat.git
+# 将配置文件复制到自己的模型目录下
+cp /root/Amath_xtuner/AMchat/config/internlm2_chat_7b_qlora_oasst1_e3_copy.py  /root/Amath_xtuner/config/
 ```
 
 2.模型下载
