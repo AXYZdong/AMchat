@@ -63,6 +63,10 @@ AM (Advanced Mathematics) Chatは、数学知識、高等数学の問題、お�
 
 ## 🚀 ニュース
 
+[2024.06.22] InternLM2-Math-Plus-1.8B モデルのファインチューニングを行い、小規模データセットをオープンソース化しました。
+
+[2024.06.21] READMEを更新しました。InternLM2-Math-Plus-7B モデルのファインチューニングを行いました。
+
 [2024.03.24] [2024 InternLM Challenge (Spring Split) | Innovation and Creativity Award](https://mp.weixin.qq.com/s/8Xh232cWplgg3qdfMdD0YQ).
 
 [2024.03.14] モデルがHuggingFaceにアップロードされました。
@@ -204,6 +208,9 @@ xtuner train /root/math/config2/internlm2_chat_7b_qlora_oasst1_e3_copy.py
 5. PTHモデルをHuggingFaceモデルに変換
 
 ```bash
+mkdir hf
+export MKL_SERVICE_FORCE_INTEL=1
+export MKL_THREADING_LAYER=GNU
 xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
                          ./work_dirs/internlm2_chat_7b_qlora_oasst1_e3_copy/epoch_3.pth \
                          ./hf
@@ -212,9 +219,6 @@ xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
 6. HuggingFaceモデルを大言語モデルにマージ
 
 ```bash
-export MKL_SERVICE_FORCE_INTEL=1
-export MKL_THREADING_LAYER='GNU'
-
 # 元のモデルパラメータの場所
 export NAME_OR_PATH_TO_LLM=/root/math/model/Shanghai_AI_Laboratory/internlm2-math-7b
 

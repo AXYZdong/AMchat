@@ -63,7 +63,9 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 
 ## 🚀 News
 
-[2024.06.21] 更新README，InternLM2-Math-Plus-7B 模型微调。
+[2024.06.22] [InternLM2-Math-Plus-1.8B 模型微调](plus/01-InternLM2-Math-Plus-1.8B%20微调.md)，开源[小规模数据集](dataset/AMchat_dataset.json)。
+
+[2024.06.21] 更新README，[InternLM2-Math-Plus-7B 模型微调](plus/02-InternLM2-Math-Plus-7B%20微调.md)。
 
 [2024.03.24] [2024浦源大模型系列挑战赛（春季赛）Top12](https://mp.weixin.qq.com/s/8Xh232cWplgg3qdfMdD0YQ)，创新创意奖。
 
@@ -207,6 +209,9 @@ xtuner train /root/math/config/internlm2_chat_7b_qlora_oasst1_e3_copy.py
 5. PTH 模型转换为 HuggingFace 模型
 
 ```bash
+mkdir hf
+export MKL_SERVICE_FORCE_INTEL=1
+export MKL_THREADING_LAYER=GNU
 xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
                          ./work_dirs/internlm2_chat_7b_qlora_oasst1_e3_copy/epoch_3.pth \
                          ./hf
@@ -214,9 +219,6 @@ xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
 
 6. HuggingFace 模型合并到大语言模型
 ```bash
-export MKL_SERVICE_FORCE_INTEL=1
-export MKL_THREADING_LAYER='GNU'
-
 # 原始模型参数存放的位置
 export NAME_OR_PATH_TO_LLM=/root/math/model/Shanghai_AI_Laboratory/internlm2-math-7b
 
@@ -396,12 +398,13 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 
 ### 项目成员
 
+- 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集，RAG内容整理，InternLM2-Math-Plus微调规划）
 - 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，RAG框架）
-- 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集，RAG内容整理）
 - 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 数据收集，数据集整理及增强，模型量化与评测，RAG推理与验证）
-- 程宏 (书生·浦语实战营助教&Datawhale鲸英助教 InternLM2-Math-Plus-7B 模型微调)
+- 程宏 （书生·浦语实战营助教&Datawhale鲸英助教 InternLM2-Math-Plus-7B 模型微调）
+- 莫宝琪（玉柴工程研究院 InternLM2-Math-Plus-1.8B 模型微调）
 - 揭熔阳 （Datawhale成员 哈尔滨工业大学(威海) 数据收集 RAG内容整理）
-- 彭琛（Datawhale成员 数据收集）
+- 彭琛 （Datawhale成员 数据收集）
 - 王新茗 （数据收集）
 - 刘志文 （Datawhale成员 山东女子学院 数据收集）
 - 王睿玥 （Northeastern University 数据收集）
