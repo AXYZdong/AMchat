@@ -87,6 +87,6 @@ streamlit run /root/cmed2/code/InternLM/chat/web_demo_finetune.py --server.addre
 
 8. 微调后的模型下载地址
 
-- openxlab: [模型中心-OpenXLab](https://openxlab.org.cn/models/detail/element/AMChat_internlm2-math-plus-20b_Yuan/tree/main)
-- modelscope: [AMChat_internlm2-math-plus-20b_Yuan · 模型库 (modelscope.cn)](https://www.modelscope.cn/models/CFYuan/AMChat_internlm2-math-plus-20b_Yuan/files)
+- openxlab: [AMchat-plus-20b](https://openxlab.org.cn/models/detail/element/AMChat_internlm2-math-plus-20b_Yuan/tree/main)
+- modelscope: [AMchat-plus-20b](https://www.modelscope.cn/models/CFYuan/AMChat_internlm2-math-plus-20b_Yuan/files)
 
