@@ -63,6 +63,8 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 
 ## 🚀 News
 
+[2024.06.23] [InternLM2-Math-Plus-20B 模型微调](plus/03-InternLM2-Math-Plus-20B%20微调.md)。
+
 [2024.06.22] [InternLM2-Math-Plus-1.8B 模型微调](plus/01-InternLM2-Math-Plus-1.8B%20微调.md)，开源[小规模数据集](dataset/AMchat_dataset.json)。
 
 [2024.06.21] 更新README，[InternLM2-Math-Plus-7B 模型微调](plus/02-InternLM2-Math-Plus-7B%20微调.md)。
@@ -401,8 +403,9 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 - 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集，RAG内容整理，InternLM2-Math-Plus微调规划）
 - 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，RAG框架）
 - 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 数据收集，数据集整理及增强，模型量化与评测，RAG推理与验证）
-- 程宏 （书生·浦语实战营助教&Datawhale鲸英助教 InternLM2-Math-Plus-7B 模型微调）
+- 程宏 （书生·浦语实战营助教&Datawhale鲸英助教 InternLM2-Math-Plus-7B 模型微调&部署）
 - 莫宝琪（玉柴工程研究院 InternLM2-Math-Plus-1.8B 模型微调）
+- 陈辅元（甘肃政法大学 InternLM2-Math-Plus-20B 模型微调）
 - 揭熔阳 （Datawhale成员 哈尔滨工业大学(威海) 数据收集 RAG内容整理）
 - 彭琛 （Datawhale成员 数据收集）
 - 王新茗 （数据收集）

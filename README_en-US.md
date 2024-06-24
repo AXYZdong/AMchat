@@ -63,6 +63,8 @@ If you find this project helpful, feel free to ⭐ Star it and help more people 
 
 ## 🚀 News
 
+[2024.06.23] InternLM2-Math-Plus-20B model fine-tuning.
+
 [2024.06.22] InternLM2-Math-Plus-1.8B model fine-tuning, open-sourced a small-scale dataset.
 
 [2024.06.21] Updated the README. Performed fine-tuning on the InternLM2-Math-Plus-7B model.
