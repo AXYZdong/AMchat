@@ -63,6 +63,12 @@ If you find this project helpful, feel free to ⭐ Star it and help more people 
 
 ## 🚀 News
 
+[2024.06.23] InternLM2-Math-Plus-20B model fine-tuning.
+
+[2024.06.22] InternLM2-Math-Plus-1.8B model fine-tuning, open-sourced a small-scale dataset.
+
+[2024.06.21] Updated the README. Performed fine-tuning on the InternLM2-Math-Plus-7B model.
+
 [2024.03.24] [2024 InternLM Challenge (Spring Split) | Innovation and Creativity Award](https://mp.weixin.qq.com/s/8Xh232cWplgg3qdfMdD0YQ).
 
 [2024.03.14] The model has been uploaded to HuggingFace.
@@ -143,7 +149,7 @@ cd AMchat
 ```bash
 conda env create -f environment.yml
 conda activate AMchat
-pip install -r requirements-raw.txt
+pip install xtuner
 ```
 
 #### XTuner Fine-tuning
@@ -177,6 +183,9 @@ model_dir = snapshot_download('Shanghai_AI_Laboratory/internlm2-math-7b', cache_
 
 3. Modify configuration files
 
+> A fine-tuned configuration file is already provided under the `config` directory, you can refer to `internlm_chat_7b_qlora_oasst1_e3_copy.py`.
+> It can be used directly; make sure to adjust the paths for `pretrained_model_name_or_path` and `data_path` accordingly.
+
 ```bash
 cd /root/math/config
 vim internlm_chat_7b_qlora_oasst1_e3_copy.py
@@ -201,6 +210,9 @@ xtuner train /root/math/config2/internlm2_chat_7b_qlora_oasst1_e3_copy.py
 5. Convert PTH model to HuggingFace model
 
 ```bash
+mkdir hf
+export MKL_SERVICE_FORCE_INTEL=1
+export MKL_THREADING_LAYER=GNU
 xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
                          ./work_dirs/internlm2_chat_7b_qlora_oasst1_e3_copy/epoch_3.pth \
                          ./hf
@@ -209,9 +221,6 @@ xtuner convert pth_to_hf ./internlm2_chat_7b_qlora_oasst1_e3_copy.py \
 6. Merge HuggingFace model into a large language model
 
 ```bash
-export MKL_SERVICE_FORCE_INTEL=1
-export MKL_THREADING_LAYER='GNU'
-
 # Original model parameter location
 export NAME_OR_PATH_TO_LLM=/root/math/model/Shanghai_AI_Laboratory/internlm2-math-7b
 
