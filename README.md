@@ -400,12 +400,13 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 
 ### 项目成员
 
-- 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 模型训练，OpenXlab应用部署，数据收集，RAG内容整理，InternLM2-Math-Plus微调规划）
+- 张友东-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责模型训练，OpenXlab应用部署，数据收集，RAG内容整理，InternLM2-Math-Plus微调规划）
 - 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，RAG框架）
-- 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 数据收集，数据集整理及增强，模型量化与评测，RAG推理与验证）
+- 肖鸿儒-项目负责人 （Datawhale成员 同济大学 书生·浦语实战营助教 负责数据收集，数据集整理及增强，模型量化与评测，RAG推理与验证）
 - 程宏 （书生·浦语实战营助教&Datawhale鲸英助教 InternLM2-Math-Plus-7B 模型微调&部署）
 - 莫宝琪（玉柴工程研究院 InternLM2-Math-Plus-1.8B 模型微调）
 - 陈辅元（甘肃政法大学 InternLM2-Math-Plus-20B 模型微调）
+- 龚鹤扬 （中国科学技术大学统计学博士 LMDeploy 模型量化）
 - 揭熔阳 （Datawhale成员 哈尔滨工业大学(威海) 数据收集 RAG内容整理）
 - 彭琛 （Datawhale成员 数据收集）
 - 王新茗 （数据收集）
