@@ -76,8 +76,8 @@ lmdeploy serve api_server \
 ```bash
 lmdeploy serve api_client http://localhost:23333
 ```
-
-这将连接到我们刚刚启动的 API 服务器。
+这将连接到我们刚刚启动的 API 服务器。运行后，可以通过命令行窗口直接与模型对话：
+![img.png](images/chat2.png)
 
 ## 6. 与模型交互
 
