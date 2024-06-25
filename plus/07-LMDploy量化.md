@@ -77,7 +77,7 @@ lmdeploy serve api_server \
 lmdeploy serve api_client http://localhost:23333
 ```
 这将连接到我们刚刚启动的 API 服务器。运行后，可以通过命令行窗口直接与模型对话：
-![img.png](images/chat2.png)
+![img.png](images/07-2.png)
 
 ## 6. （可选）直接启动聊天界面
 
@@ -88,7 +88,7 @@ lmdeploy chat /root/ft-math/Shanghai_AI_Laboratory/internlm2-math-plus-7b-4bit -
 ```
 
 这将启动一个交互式的聊天界面，您可以直接与量化后的模型对话。
-![img.png](images/chat.png)
+![img.png](images/07-1.png)
 
 
 ## 结语和讨论
