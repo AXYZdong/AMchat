@@ -42,7 +42,7 @@ logger = logging.get_logger(__name__)
 print('pip install modelscope websockets')
 os.system(f'pip install modelscope websockets==11.0.3')
 
-base_path = './model'
+base_path = './model/amchat'
 os.system(f'git clone https://code.openxlab.org.cn/chg0901/AMChat_internlm2-math-plus-7b_Hong.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
