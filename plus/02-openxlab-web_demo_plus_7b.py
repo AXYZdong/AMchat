@@ -249,9 +249,10 @@ def main():
     print('load model begin.')
     model, tokenizer = load_model()
     print('load model end.')
-
-    user_avator = '../assets/user.png'
-    robot_avator = '../assets/robot.png'
+    directory_list = os.listdir('.')
+    print(directory_list)
+    user_avator = './assets/user.png'
+    robot_avator = './assets/robot.png'
 
     st.title('💬 AMchat 高等数学大模型 (based on internlm2-math-plus-7b) 🔢')
 
