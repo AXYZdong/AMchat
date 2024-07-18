@@ -42,7 +42,7 @@ logger = logging.get_logger(__name__)
 print('pip install modelscope websockets')
 os.system(f'pip install modelscope websockets==11.0.3')
 
-base_path = './model'
+base_path = './model/amchat'
 os.system(f'git clone https://code.openxlab.org.cn/chg0901/AMChat_internlm2-math-plus-7b_Hong.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
@@ -249,9 +249,10 @@ def main():
     print('load model begin.')
     model, tokenizer = load_model()
     print('load model end.')
-
-    user_avator = '../assets/user.png'
-    robot_avator = '../assets/robot.png'
+    directory_list = os.listdir('.')
+    print(directory_list)
+    user_avator = './assets/user.png'
+    robot_avator = './assets/robot.png'
 
     st.title('💬 AMchat 高等数学大模型 (based on internlm2-math-plus-7b) 🔢')
 
