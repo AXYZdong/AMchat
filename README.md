@@ -63,6 +63,8 @@ AM (Advanced Mathematics) chat 是一个集成了数学知识和高等数学习�
 
 ## 🚀 News
 
+[2024.08.09] 我们发布了Q8_0量化模型 [AMchat-q8_0.gguf](https://huggingface.co/axyzdong/AMchat-GGUF)。
+
 [2024.06.23] [InternLM2-Math-Plus-20B 模型微调](plus/03-InternLM2-Math-Plus-20B%20微调.md)。
 
 [2024.06.22] [InternLM2-Math-Plus-1.8B 模型微调](plus/01-InternLM2-Math-Plus-1.8B%20微调.md)，开源[小规模数据集](dataset/AMchat_dataset.json)。

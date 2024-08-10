@@ -63,6 +63,8 @@ AM (Advanced Mathematics) Chatは、数学知識、高等数学の問題、お�
 
 ## 🚀 ニュース
 
+[2024.08.09] Q8_0定量モデル[AMchat-q8_0.gguf](https://huggingface.co/axyzdong/AMchat-GGUF)をリリースしました。
+
 [2024.06.23] InternLM2-Math-Plus-20B モデルのファインチューニングを行い。
 
 [2024.06.22] InternLM2-Math-Plus-1.8B モデルのファインチューニングを行い、小規模データセットをオープンソース化しました。
